@@ -1,7 +1,7 @@
 ## Pre-requisites
 
 1. Maven is installed and the environment variable set (From the command line run "mvn -v")
-2. Java 11 is installed and the environment variable set (From the command line run "java -version")
+2. Java 11+ is installed and the environment variable set (From the command line run "java -version")
 
 ### Running locally
 

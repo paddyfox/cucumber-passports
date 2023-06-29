@@ -1,0 +1,38 @@
+package kainos.specs.helpers;
+
+import java.util.Random;
+
+/**
+ * Rubbish random string generator.
+ * TODO: Add support for UTF-8
+ */
+public class RandomString {
+
+    private static final char[] symbols;
+
+    static {
+        StringBuilder tmp = new StringBuilder();
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            tmp.append(ch);
+        }
+        symbols = tmp.toString().toCharArray();
+    }
+
+    private final Random random = new Random();
+
+    private final char[] buf;
+
+    public RandomString(int length) {
+        if (length < 1) {
+            throw new IllegalArgumentException("length < 1: " + length);
+        }
+        buf = new char[length];
+    }
+
+    public String nextString() {
+        for (int i = 0; i < buf.length; i++) {
+            buf[i] = symbols[random.nextInt(symbols.length)];
+        }
+        return new String(buf);
+    }
+}

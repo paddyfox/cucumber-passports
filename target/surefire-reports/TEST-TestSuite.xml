@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="106.795" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/patrickf/HMPO/DCS/specs-dcs/target/test-classes:/Users/patrickf/HMPO/DCS/specs-dcs/target/classes:/Users/patrickf/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/Users/patrickf/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/patrickf/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/patrickf/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/patrickf/.m2/repository/io/github/bonigarcia/webdrivermanager/5.3.2/webdrivermanager-5.3.2.jar:/Users/patrickf/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java/3.2.14/docker-java-3.2.14.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-core/3.2.14/docker-java-core-3.2.14.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-api/3.2.14/docker-java-api-3.2.14.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/patrickf/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.jar:/Users/patrickf/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.2.14/docker-java-transport-httpclient5-3.2.14.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-transport/3.2.14/docker-java-transport-3.2.14.jar:/Users/patrickf/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/patrickf/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/patrickf/.m2/repository/io/appium/java-client/8.3.0/java-client-8.3.0.jar:/Users/patrickf/.m2/repository/cglib/cglib/3.3.0/cglib-3.3.0.jar:/Users/patrickf/.m2/repository/org/ow2/asm/asm/7.1/asm-7.1.jar:/Users/patrickf/.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar:/Users/patrickf/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/patrickf/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/Users/patrickf/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-java/4.8.1/selenium-java-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-api/4.8.1/selenium-api-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.8.1/selenium-chrome-driver-4.8.1.jar:/Users/patrickf/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/patrickf/.m2/repository/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar:/Users/patrickf/.m2/repository/com/google/auto/auto-common/1.2/auto-common-1.2.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.8.1/selenium-chromium-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-json/4.8.1/selenium-json-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v108/4.8.1/selenium-devtools-v108-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v109/4.8.1/selenium-devtools-v109-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v110/4.8.1/selenium-devtools-v110-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.8.1/selenium-devtools-v85-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.8.1/selenium-edge-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.8.1/selenium-firefox-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-http/4.8.1/selenium-http-4.8.1.jar:/Users/patrickf/.m2/repository/dev/failsafe/failsafe/3.3.0/failsafe-3.3.0.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.8.1/selenium-ie-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.8.1/selenium-remote-driver-4.8.1.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.87.Final/netty-transport-classes-epoll-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.87.Final/netty-transport-classes-kqueue-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-epoll/4.1.87.Final/netty-transport-native-epoll-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.87.Final/netty-transport-native-kqueue-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.87.Final/netty-transport-native-unix-common-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-api/1.22.0/opentelemetry-api-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-context/1.22.0/opentelemetry-context-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.22.0/opentelemetry-exporter-logging-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.22.0/opentelemetry-sdk-metrics-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.22.0-alpha/opentelemetry-sdk-logs-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.22.0-alpha/opentelemetry-api-logs-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.22.0/opentelemetry-sdk-common-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.22.0/opentelemetry-sdk-extension-autoconfigure-spi-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.22.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.22.0/opentelemetry-sdk-trace-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.22.0/opentelemetry-sdk-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.22.0-alpha/opentelemetry-semconv-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/ous/jtoml/2.0.0/jtoml-2.0.0.jar:/Users/patrickf/.m2/repository/net/bytebuddy/byte-buddy/1.12.22/byte-buddy-1.12.22.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/patrickf/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/patrickf/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/patrickf/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/patrickf/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/patrickf/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.8.1/selenium-manager-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.8.1/selenium-safari-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-support/4.8.1/selenium-support-4.8.1.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-java/6.10.4/cucumber-java-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-core/6.10.4/cucumber-core-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-gherkin/6.10.4/cucumber-gherkin-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.4/cucumber-gherkin-messages-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/patrickf/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/patrickf/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-plugin/6.10.4/cucumber-plugin-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/docstring/6.10.4/docstring-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/patrickf/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/patrickf/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-testng/6.10.4/cucumber-testng-6.10.4.jar:/Users/patrickf/.m2/repository/net/masterthought/cucumber-reporting/5.7.4/cucumber-reporting-5.7.4.jar:/Users/patrickf/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/patrickf/.m2/repository/joda-time/joda-time/2.10.14/joda-time-2.10.14.jar:/Users/patrickf/.m2/repository/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar:/Users/patrickf/.m2/repository/org/jsoup/jsoup/1.15.3/jsoup-1.15.3.jar:/Users/patrickf/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/patrickf/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/patrickf/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/patrickf/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/patrickf/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/patrickf/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/patrickf/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/patrickf/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20211018.2/owasp-java-html-sanitizer-20211018.2.jar:/Users/patrickf/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/patrickf/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-picocontainer/6.10.4/cucumber-picocontainer-6.10.4.jar:/Users/patrickf/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/patrickf/.m2/repository/io/rest-assured/rest-assured/4.4.0/rest-assured-4.4.0.jar:/Users/patrickf/.m2/repository/org/codehaus/groovy/groovy/3.0.8/groovy-3.0.8.jar:/Users/patrickf/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.8/groovy-xml-3.0.8.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/patrickf/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/patrickf/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/patrickf/.m2/repository/io/rest-assured/json-path/4.4.0/json-path-4.4.0.jar:/Users/patrickf/.m2/repository/org/codehaus/groovy/groovy-json/3.0.8/groovy-json-3.0.8.jar:/Users/patrickf/.m2/repository/io/rest-assured/rest-assured-common/4.4.0/rest-assured-common-4.4.0.jar:/Users/patrickf/.m2/repository/io/rest-assured/xml-path/4.4.0/xml-path-4.4.0.jar:/Users/patrickf/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/patrickf/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/patrickf/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/Users/patrickf/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/patrickf/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/Users/patrickf/.m2/repository/ch/qos/logback/logback-classic/1.4.6/logback-classic-1.4.6.jar:/Users/patrickf/.m2/repository/ch/qos/logback/logback-core/1.4.6/logback-core-1.4.6.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-configuration2/2.8.0/commons-configuration2-2.8.0.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar:/Users/patrickf/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/patrickf/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/patrickf/.m2/repository/org/jooq/jool-java-8/0.9.14/jool-java-8-0.9.14.jar:/Users/patrickf/.m2/repository/com/browserstack/browserstack-local-java/1.0.6/browserstack-local-java-1.0.6.jar:/Users/patrickf/.m2/repository/org/json/json/20160212/json-20160212.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-starter-activemq/2.6.8/spring-boot-starter-activemq-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-starter/2.6.8/spring-boot-starter-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot/2.6.8/spring-boot-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-aop/5.3.20/spring-aop-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-expression/5.3.20/spring-expression-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.6.8/spring-boot-autoconfigure-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.6.8/spring-boot-starter-logging-2.6.8.jar:/Users/patrickf/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar:/Users/patrickf/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar:/Users/patrickf/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar:/Users/patrickf/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/patrickf/.m2/repository/org/springframework/spring-core/5.3.20/spring-core-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-jcl/5.3.20/spring-jcl-5.3.20.jar:/Users/patrickf/.m2/repository/org/yaml/snakeyaml/1.29/snakeyaml-1.29.jar:/Users/patrickf/.m2/repository/org/springframework/spring-jms/5.3.20/spring-jms-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-beans/5.3.20/spring-beans-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-messaging/5.3.20/spring-messaging-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-tx/5.3.20/spring-tx-5.3.20.jar:/Users/patrickf/.m2/repository/org/apache/activemq/activemq-broker/5.16.5/activemq-broker-5.16.5.jar:/Users/patrickf/.m2/repository/org/apache/activemq/activemq-client/5.16.5/activemq-client-5.16.5.jar:/Users/patrickf/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.jar:/Users/patrickf/.m2/repository/org/apache/activemq/activemq-openwire-legacy/5.16.5/activemq-openwire-legacy-5.16.5.jar:/Users/patrickf/.m2/repository/jakarta/jms/jakarta.jms-api/2.0.3/jakarta.jms-api-2.0.3.jar:/Users/patrickf/.m2/repository/jakarta/management/j2ee/jakarta.management.j2ee-api/1.1.4/jakarta.management.j2ee-api-1.1.4.jar:/Users/patrickf/.m2/repository/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.4/jackson-datatype-jsr310-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.4/jackson-databind-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.13.4/jackson-datatype-jdk8-2.13.4.jar:/Users/patrickf/.m2/repository/com/jhlabs/filters/2.0.235-1/filters-2.0.235-1.jar:/Users/patrickf/.m2/repository/org/apache/pdfbox/xmpbox/2.0.25/xmpbox-2.0.25.jar:/Users/patrickf/.m2/repository/org/apache/pdfbox/pdfbox/2.0.25/pdfbox-2.0.25.jar:/Users/patrickf/.m2/repository/org/apache/pdfbox/fontbox/2.0.25/fontbox-2.0.25.jar:/Users/patrickf/.m2/repository/io/netty/netty-handler-proxy/4.1.77.Final/netty-handler-proxy-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-common/4.1.77.Final/netty-common-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-buffer/4.1.77.Final/netty-buffer-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport/4.1.77.Final/netty-transport-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-resolver/4.1.77.Final/netty-resolver-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-codec/4.1.77.Final/netty-codec-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-codec-socks/4.1.77.Final/netty-codec-socks-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-codec-http/4.1.77.Final/netty-codec-http-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-handler/4.1.77.Final/netty-handler-4.1.77.Final.jar:/Users/patrickf/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.70/bcprov-jdk15on-1.70.jar:/Users/patrickf/.m2/repository/com/ibm/icu/icu4j/66.1/icu4j-66.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/patrickf/HMPO/DCS/specs-dcs/target/surefire/surefirebooter-20230613142807897_3.jar /Users/patrickf/HMPO/DCS/specs-dcs/target/surefire 2023-06-13T14-28-07_488-jvmRun1 surefire-20230613142807897_1tmp surefire_0-20230613142807897_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/patrickf/HMPO/DCS/specs-dcs/target/test-classes:/Users/patrickf/HMPO/DCS/specs-dcs/target/classes:/Users/patrickf/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/Users/patrickf/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/patrickf/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/patrickf/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/patrickf/.m2/repository/io/github/bonigarcia/webdrivermanager/5.3.2/webdrivermanager-5.3.2.jar:/Users/patrickf/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java/3.2.14/docker-java-3.2.14.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-core/3.2.14/docker-java-core-3.2.14.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-api/3.2.14/docker-java-api-3.2.14.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/patrickf/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.jar:/Users/patrickf/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.2.14/docker-java-transport-httpclient5-3.2.14.jar:/Users/patrickf/.m2/repository/com/github/docker-java/docker-java-transport/3.2.14/docker-java-transport-3.2.14.jar:/Users/patrickf/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/patrickf/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/patrickf/.m2/repository/io/appium/java-client/8.3.0/java-client-8.3.0.jar:/Users/patrickf/.m2/repository/cglib/cglib/3.3.0/cglib-3.3.0.jar:/Users/patrickf/.m2/repository/org/ow2/asm/asm/7.1/asm-7.1.jar:/Users/patrickf/.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar:/Users/patrickf/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/patrickf/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/Users/patrickf/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-java/4.8.1/selenium-java-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-api/4.8.1/selenium-api-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.8.1/selenium-chrome-driver-4.8.1.jar:/Users/patrickf/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/patrickf/.m2/repository/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar:/Users/patrickf/.m2/repository/com/google/auto/auto-common/1.2/auto-common-1.2.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.8.1/selenium-chromium-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-json/4.8.1/selenium-json-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v108/4.8.1/selenium-devtools-v108-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v109/4.8.1/selenium-devtools-v109-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v110/4.8.1/selenium-devtools-v110-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.8.1/selenium-devtools-v85-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.8.1/selenium-edge-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.8.1/selenium-firefox-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-http/4.8.1/selenium-http-4.8.1.jar:/Users/patrickf/.m2/repository/dev/failsafe/failsafe/3.3.0/failsafe-3.3.0.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.8.1/selenium-ie-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.8.1/selenium-remote-driver-4.8.1.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.87.Final/netty-transport-classes-epoll-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.87.Final/netty-transport-classes-kqueue-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-epoll/4.1.87.Final/netty-transport-native-epoll-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.87.Final/netty-transport-native-kqueue-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.87.Final/netty-transport-native-unix-common-4.1.87.Final.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-api/1.22.0/opentelemetry-api-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-context/1.22.0/opentelemetry-context-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.22.0/opentelemetry-exporter-logging-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.22.0/opentelemetry-sdk-metrics-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.22.0-alpha/opentelemetry-sdk-logs-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.22.0-alpha/opentelemetry-api-logs-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.22.0/opentelemetry-sdk-common-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.22.0/opentelemetry-sdk-extension-autoconfigure-spi-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.22.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.22.0/opentelemetry-sdk-trace-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.22.0/opentelemetry-sdk-1.22.0.jar:/Users/patrickf/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.22.0-alpha/opentelemetry-semconv-1.22.0-alpha.jar:/Users/patrickf/.m2/repository/io/ous/jtoml/2.0.0/jtoml-2.0.0.jar:/Users/patrickf/.m2/repository/net/bytebuddy/byte-buddy/1.12.22/byte-buddy-1.12.22.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/patrickf/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/patrickf/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/patrickf/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/patrickf/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/patrickf/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.8.1/selenium-manager-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.8.1/selenium-safari-driver-4.8.1.jar:/Users/patrickf/.m2/repository/org/seleniumhq/selenium/selenium-support/4.8.1/selenium-support-4.8.1.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-java/6.10.4/cucumber-java-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-core/6.10.4/cucumber-core-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-gherkin/6.10.4/cucumber-gherkin-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.4/cucumber-gherkin-messages-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/patrickf/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/patrickf/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-plugin/6.10.4/cucumber-plugin-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/docstring/6.10.4/docstring-6.10.4.jar:/Users/patrickf/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/patrickf/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/patrickf/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-testng/6.10.4/cucumber-testng-6.10.4.jar:/Users/patrickf/.m2/repository/net/masterthought/cucumber-reporting/5.7.4/cucumber-reporting-5.7.4.jar:/Users/patrickf/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/patrickf/.m2/repository/joda-time/joda-time/2.10.14/joda-time-2.10.14.jar:/Users/patrickf/.m2/repository/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar:/Users/patrickf/.m2/repository/org/jsoup/jsoup/1.15.3/jsoup-1.15.3.jar:/Users/patrickf/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/patrickf/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/patrickf/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/patrickf/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/patrickf/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/patrickf/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/patrickf/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/patrickf/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20211018.2/owasp-java-html-sanitizer-20211018.2.jar:/Users/patrickf/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/patrickf/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/patrickf/.m2/repository/io/cucumber/cucumber-picocontainer/6.10.4/cucumber-picocontainer-6.10.4.jar:/Users/patrickf/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/patrickf/.m2/repository/io/rest-assured/rest-assured/4.4.0/rest-assured-4.4.0.jar:/Users/patrickf/.m2/repository/org/codehaus/groovy/groovy/3.0.8/groovy-3.0.8.jar:/Users/patrickf/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.8/groovy-xml-3.0.8.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/patrickf/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/patrickf/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/patrickf/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/patrickf/.m2/repository/io/rest-assured/json-path/4.4.0/json-path-4.4.0.jar:/Users/patrickf/.m2/repository/org/codehaus/groovy/groovy-json/3.0.8/groovy-json-3.0.8.jar:/Users/patrickf/.m2/repository/io/rest-assured/rest-assured-common/4.4.0/rest-assured-common-4.4.0.jar:/Users/patrickf/.m2/repository/io/rest-assured/xml-path/4.4.0/xml-path-4.4.0.jar:/Users/patrickf/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/patrickf/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/patrickf/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/Users/patrickf/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/patrickf/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/Users/patrickf/.m2/repository/ch/qos/logback/logback-classic/1.4.6/logback-classic-1.4.6.jar:/Users/patrickf/.m2/repository/ch/qos/logback/logback-core/1.4.6/logback-core-1.4.6.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-configuration2/2.8.0/commons-configuration2-2.8.0.jar:/Users/patrickf/.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar:/Users/patrickf/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/patrickf/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/patrickf/.m2/repository/org/jooq/jool-java-8/0.9.14/jool-java-8-0.9.14.jar:/Users/patrickf/.m2/repository/com/browserstack/browserstack-local-java/1.0.6/browserstack-local-java-1.0.6.jar:/Users/patrickf/.m2/repository/org/json/json/20160212/json-20160212.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-starter-activemq/2.6.8/spring-boot-starter-activemq-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-starter/2.6.8/spring-boot-starter-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot/2.6.8/spring-boot-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-aop/5.3.20/spring-aop-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-expression/5.3.20/spring-expression-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.6.8/spring-boot-autoconfigure-2.6.8.jar:/Users/patrickf/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.6.8/spring-boot-starter-logging-2.6.8.jar:/Users/patrickf/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar:/Users/patrickf/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar:/Users/patrickf/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar:/Users/patrickf/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/patrickf/.m2/repository/org/springframework/spring-core/5.3.20/spring-core-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-jcl/5.3.20/spring-jcl-5.3.20.jar:/Users/patrickf/.m2/repository/org/yaml/snakeyaml/1.29/snakeyaml-1.29.jar:/Users/patrickf/.m2/repository/org/springframework/spring-jms/5.3.20/spring-jms-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-beans/5.3.20/spring-beans-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-messaging/5.3.20/spring-messaging-5.3.20.jar:/Users/patrickf/.m2/repository/org/springframework/spring-tx/5.3.20/spring-tx-5.3.20.jar:/Users/patrickf/.m2/repository/org/apache/activemq/activemq-broker/5.16.5/activemq-broker-5.16.5.jar:/Users/patrickf/.m2/repository/org/apache/activemq/activemq-client/5.16.5/activemq-client-5.16.5.jar:/Users/patrickf/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.jar:/Users/patrickf/.m2/repository/org/apache/activemq/activemq-openwire-legacy/5.16.5/activemq-openwire-legacy-5.16.5.jar:/Users/patrickf/.m2/repository/jakarta/jms/jakarta.jms-api/2.0.3/jakarta.jms-api-2.0.3.jar:/Users/patrickf/.m2/repository/jakarta/management/j2ee/jakarta.management.j2ee-api/1.1.4/jakarta.management.j2ee-api-1.1.4.jar:/Users/patrickf/.m2/repository/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.4/jackson-datatype-jsr310-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.4/jackson-databind-2.13.4.jar:/Users/patrickf/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.13.4/jackson-datatype-jdk8-2.13.4.jar:/Users/patrickf/.m2/repository/com/jhlabs/filters/2.0.235-1/filters-2.0.235-1.jar:/Users/patrickf/.m2/repository/org/apache/pdfbox/xmpbox/2.0.25/xmpbox-2.0.25.jar:/Users/patrickf/.m2/repository/org/apache/pdfbox/pdfbox/2.0.25/pdfbox-2.0.25.jar:/Users/patrickf/.m2/repository/org/apache/pdfbox/fontbox/2.0.25/fontbox-2.0.25.jar:/Users/patrickf/.m2/repository/io/netty/netty-handler-proxy/4.1.77.Final/netty-handler-proxy-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-common/4.1.77.Final/netty-common-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-buffer/4.1.77.Final/netty-buffer-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-transport/4.1.77.Final/netty-transport-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-resolver/4.1.77.Final/netty-resolver-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-codec/4.1.77.Final/netty-codec-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-codec-socks/4.1.77.Final/netty-codec-socks-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-codec-http/4.1.77.Final/netty-codec-http-4.1.77.Final.jar:/Users/patrickf/.m2/repository/io/netty/netty-handler/4.1.77.Final/netty-handler-4.1.77.Final.jar:/Users/patrickf/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.70/bcprov-jdk15on-1.70.jar:/Users/patrickf/.m2/repository/com/ibm/icu/icu4j/66.1/icu4j-66.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/patrickf"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2019-01-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/patrickf/HMPO/DCS/specs-dcs"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/patrickf/HMPO/DCS/specs-dcs/target/surefire/surefirebooter-20230613142807897_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.2+9"/>
+    <property name="user.name" value="patrickf"/>
+    <property name="path.separator" value=":"/>
+    <property name="otel.metrics.exporter" value="none"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="otel.traces.exporter" value="none"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="/Users/patrickf/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/6f/b1rbs93s0cz8_ddkjqq21qb40000gn/T/"/>
+    <property name="java.version" value="11.0.2"/>
+    <property name="user.dir" value="/Users/patrickf/HMPO/DCS/specs-dcs"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/patrickf/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.2+9"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey8&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](1)" classname="runners.RunSmokeTest" time="80.75">
+    <system-out><![CDATA[[WARN] [TestNG-tests-1] 2023-06-13 14:28:10 - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
+
+@SMK5 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey5 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:68&amp#27;[0m
+
+@SMK4 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey4 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:55&amp#27;[0m
+
+@SMK7 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey7 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:94&amp#27;[0m
+
+@SMK1 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey1 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:16&amp#27;[0m
+
+@SMK2 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey2 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:29&amp#27;[0m
+
+@SMK10 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey10 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:133&amp#27;[0m
+
+@SMK6 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey6 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:81&amp#27;[0m
+
+@SMK8 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey8 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:107&amp#27;[0m
+
+@SMK9 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey9 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:120&amp#27;[0m
+
+@SMK3 @smoke
+Scenario Outline: Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey3 &amp#27;[90m# src/test/resources/features/specifications/smoke/customer_journey_transformation_smoke.feature:42&amp#27;[0m
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:10 - Driver needs to be created, creating one...
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-9
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-6
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-7
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-8
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-1
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-3
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-5
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-0
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-2
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:10 - Browser type: ChromeRemote has been set in the Driver Factory on thread TestNG-PoolService-4
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 1947-06-13
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Adult Applicant Title Type: [Mr]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Gender: F
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Name Change Reason Type: [GenderReassignment]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - INVALID EMAIL ID: [pex12@live.co.ukcel]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Passport Size: Standard
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Delivery Type: Standard
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - APPLICANT DESIRES EMAIL UPDATES: [yes]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - APPLICANT DESIRES TEXT UPDATES: [yes]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 1963-06-13
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 1944-06-13
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 2005-06-13
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 1910-09-02
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 1925-09-02
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 1925-09-02
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant Date of Birth: 1919-09-02
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - existingPassportNumber PASSPORT NUMBER: 316811983
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - parentOnePassportNumber PASSPORT NUMBER: 388131844
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:17 - parentTwoPassportNumber PASSPORT NUMBER: 375323579
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1995-06-13
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Adult Applicant Title Type: [Other]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Gender: M
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Name Change Reason Type: [Other]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - INVALID EMAIL ID: [pex6@btconnect.comvuj]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Passport Size: Frequent traveller
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Delivery Type: Secure
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - APPLICANT DESIRES EMAIL UPDATES: [no]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - APPLICANT DESIRES TEXT UPDATES: [yes]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1976-06-13
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1976-06-13
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1993-06-13
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1910-09-02
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1907-09-02
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1908-09-02
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant Date of Birth: 1901-09-02
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - existingPassportNumber PASSPORT NUMBER: 344947509
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - parentOnePassportNumber PASSPORT NUMBER: 318451994
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:17 - parentTwoPassportNumber PASSPORT NUMBER: 344204812
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1960-06-13
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Adult Applicant Title Type: [Mrs]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Gender: F
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Name Change Reason Type: [Other]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - INVALID EMAIL ID: [pex34@gmail.comnwy]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Passport Size: Standard
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Delivery Type: Standard
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - APPLICANT DESIRES EMAIL UPDATES: [no]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - APPLICANT DESIRES TEXT UPDATES: [yes]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1973-06-13
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1950-06-13
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1966-06-13
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1925-09-02
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1900-09-02
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1921-09-02
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant Date of Birth: 1917-09-02
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - existingPassportNumber PASSPORT NUMBER: 398590781
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - parentOnePassportNumber PASSPORT NUMBER: 376281319
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:17 - parentTwoPassportNumber PASSPORT NUMBER: 358988762
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1970-06-13
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Adult Applicant Title Type: [Mr]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Gender: F
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Name Change Reason Type: [GenderReassignment]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - INVALID EMAIL ID: [pex5@aol.comrzu]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Passport Size: Frequent traveller
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Delivery Type: Secure
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - APPLICANT DESIRES EMAIL UPDATES: [yes]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - APPLICANT DESIRES TEXT UPDATES: [no]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1971-06-13
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1989-06-13
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1959-06-13
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1909-09-02
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1914-09-02
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1915-09-02
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant Date of Birth: 1911-09-02
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - existingPassportNumber PASSPORT NUMBER: 349965430
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - parentOnePassportNumber PASSPORT NUMBER: 300054435
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:17 - parentTwoPassportNumber PASSPORT NUMBER: 385633509
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                           &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1951-06-13
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Adult Applicant Title Type: [Miss]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Gender: M
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Name Change Reason Type: [Marriage]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - INVALID EMAIL ID: [pex13@live.comkbj]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Passport Size: Standard
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Delivery Type: Standard
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - APPLICANT DESIRES EMAIL UPDATES: [yes]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - APPLICANT DESIRES TEXT UPDATES: [yes]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1947-06-13
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1963-06-13
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1985-06-13
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1922-09-02
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1917-09-02
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1908-09-02
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant Date of Birth: 1917-09-02
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - existingPassportNumber PASSPORT NUMBER: 327441778
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - parentOnePassportNumber PASSPORT NUMBER: 362548175
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:17 - parentTwoPassportNumber PASSPORT NUMBER: 325960155
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 1939-06-13
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Adult Applicant Title Type: [Ms]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Gender: M
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Name Change Reason Type: [GenderReassignment]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - INVALID EMAIL ID: [pex30@hotmail.frrwc]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Passport Size: Standard
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Delivery Type: Standard
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - APPLICANT DESIRES EMAIL UPDATES: [yes]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - APPLICANT DESIRES TEXT UPDATES: [yes]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 1974-06-13
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 1942-06-13
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 2006-06-13
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 1909-09-02
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 1907-09-02
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 1905-09-02
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant Date of Birth: 1927-09-02
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - existingPassportNumber PASSPORT NUMBER: 323210577
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - parentOnePassportNumber PASSPORT NUMBER: 304178953
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:18 - parentTwoPassportNumber PASSPORT NUMBER: 334008073
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1982-06-13
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Adult Applicant Title Type: [Miss]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Gender: M
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Name Change Reason Type: [Marriage]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - INVALID EMAIL ID: [pex3@hotmail.co.ukajh]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Passport Size: Frequent traveller
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Delivery Type: Secure
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - APPLICANT DESIRES EMAIL UPDATES: [no]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - APPLICANT DESIRES TEXT UPDATES: [yes]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1968-06-13
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1946-06-13
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1970-06-13
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1926-09-02
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1929-09-02
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1912-09-02
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant Date of Birth: 1919-09-02
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - existingPassportNumber PASSPORT NUMBER: 312969664
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - parentOnePassportNumber PASSPORT NUMBER: 371208474
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:18 - parentTwoPassportNumber PASSPORT NUMBER: 396765936
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 1988-06-13
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Adult Applicant Title Type: [Miss]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Gender: F
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Name Change Reason Type: [GenderReassignment]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - INVALID EMAIL ID: [pex15@me.comfxz]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Passport Size: Standard
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Delivery Type: Standard
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - APPLICANT DESIRES EMAIL UPDATES: [yes]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - APPLICANT DESIRES TEXT UPDATES: [no]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 1990-06-13
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 1980-06-13
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 2000-06-13
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 1927-09-02
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 1912-09-02
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 1912-09-02
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant Date of Birth: 1928-09-02
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - existingPassportNumber PASSPORT NUMBER: 340638476
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - parentOnePassportNumber PASSPORT NUMBER: 312932172
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:18 - parentTwoPassportNumber PASSPORT NUMBER: 374696950
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:18 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:18 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:18 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1991-06-13
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Adult Applicant Title Type: [Mr]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Gender: F
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Name Change Reason Type: [Marriage]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - INVALID EMAIL ID: [pex0@gmail.combra]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Passport Size: Frequent traveller
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Delivery Type: Secure
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - APPLICANT DESIRES EMAIL UPDATES: [yes]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - APPLICANT DESIRES TEXT UPDATES: [no]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1962-06-13
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1980-06-13
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1954-06-13
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1926-09-02
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1913-09-02
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1909-09-02
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant Date of Birth: 1917-09-02
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - existingPassportNumber PASSPORT NUMBER: 321396713
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - parentOnePassportNumber PASSPORT NUMBER: 377167548
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:19 - parentTwoPassportNumber PASSPORT NUMBER: 330876052
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:19 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:19 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:19 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:19 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:20 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:20 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:21 - Session ID: null
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:21 - Browser Is: RemoteWebDriver: chrome on WINDOWS (68764e60a3408f9270e8e7c44461565b2cdcb870)
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:21 - Not switching language
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1949-06-13
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Adult Applicant Title Type: [Ms]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Gender: F
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Name Change Reason Type: [Marriage]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - INVALID EMAIL ID: [pex1@googlemail.comiwx]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Passport Size: Frequent traveller
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Delivery Type: Standard
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - APPLICANT DESIRES EMAIL UPDATES: [no]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - APPLICANT DESIRES TEXT UPDATES: [yes]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1982-06-13
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1960-06-13
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1999-06-13
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1906-09-02
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1925-09-02
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1911-09-02
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant Date of Birth: 1905-09-02
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant existing passport issue date: [2013-09-13]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - Applicant existing passport expiry date: [2023-09-13]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - existingPassportNumber PASSPORT NUMBER: 352318565
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - parentOnePassportNumber PASSPORT NUMBER: 318869631
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:21 - parentTwoPassportNumber PASSPORT NUMBER: 373694285
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man applicant of type &amp#27;[0m&amp#27;[32m&amp#27;[1madult United Kingdom first time&amp#27;[0m                                                                          &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.anApplicant(java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:21 - Session ID: null
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:21 - Browser Is: RemoteWebDriver: chrome on WINDOWS (294acc95b4ca7cf9659de018dbe4255208262eb0)
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:21 - Not switching language
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:21 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:21 - Session ID: null
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:21 - Browser Is: RemoteWebDriver: chrome on WINDOWS (89da6fc3dcfe28c2149c66033e294e8763efd092)
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:21 - Not switching language
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:21 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:22 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:22 - Session ID: null
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:22 - Browser Is: RemoteWebDriver: chrome on WINDOWS (c9d6f484d075f85facdc817ed3d7d087a92cb899)
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:22 - Not switching language
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:22 - Session ID: null
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:22 - Browser Is: RemoteWebDriver: chrome on WINDOWS (69c1555253bbc10142eabcc2c0431b5c9fde056b)
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:22 - Not switching language
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:23 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:23 - Session ID: null
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:23 - Browser Is: RemoteWebDriver: chrome on WINDOWS (00a9bd3a703ae4c551780f33a13a89076e660c6d)
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:23 - Not switching language
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:23 - Loaded page: Apply online for a UK passport
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:23 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:23 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:24 - Session ID: null
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:24 - Browser Is: RemoteWebDriver: chrome on WINDOWS (283c8be2239abfaecb0de3f20e32bdcf6e83442c)
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:24 - Not switching language
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:24 - Session ID: null
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:24 - Browser Is: RemoteWebDriver: chrome on WINDOWS (a05c096f3c4b9d39c5d0106206a4074e144a3382)
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:24 - Not switching language
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:24 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:24 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:24 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:25 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:25 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:26 - Session ID: null
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:26 - Browser Is: RemoteWebDriver: chrome on WINDOWS (1330b2957ec6ffb1540bace8acf978830ea770f9)
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:26 - Not switching language
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:26 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:26 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:26 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:27 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:27 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:27 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:27 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:28 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:28 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:28 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:28 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:28 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:29 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:29 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:29 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:29 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:29 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:30 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:30 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:30 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:31 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:31 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:31 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:31 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:32 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:32 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:32 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:32 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:32 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:32 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:33 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:33 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:33 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:33 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:34 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:34 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:34 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:34 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:35 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:35 - Session ID: null
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:35 - Browser Is: RemoteWebDriver: chrome on WINDOWS (b2bfee65023c0a9e1dfce90af8b587f420485ad1)
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:35 - Not switching language
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:35 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:35 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:35 - Loaded page: Do you live in the UK?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:36 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:36 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:36 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:36 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:36 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:36 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:37 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:37 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:37 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:38 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:38 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:38 - DUAL NATIONALITY IS SET TO [true]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:38 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:38 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:38 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:38 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:39 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:39 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:39 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:39 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:39 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:39 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:39 - Loaded page: Date of birth
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:39 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:40 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:40 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:40 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:40 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:40 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:40 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:41 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:41 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:41 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:41 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:41 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:41 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:41 - Loaded page: Have you had a UK passport before?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:41 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:42 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:42 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:42 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:42 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:42 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:42 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:43 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:43 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:43 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:43 - Loaded page: How to apply
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:43 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:43 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:43 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:43 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:43 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:44 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:44 - Loaded page: How to get a digital passport photo
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:44 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:44 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:45 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:45 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:45 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:45 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:45 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:45 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:46 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:46 - DUAL NATIONALITY IS SET TO [false]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:46 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:46 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:46 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:47 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:47 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:47 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:47 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:48 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:48 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:48 - Loaded page: How to take a digital passport photo
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:49 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:49 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:49 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:49 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:49 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:49 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:49 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:50 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:50 - Loaded page: Upload your photo
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:50 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:50 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:50 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:51 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:51 - PHOTO UPLOAD NAME: [photo-passport-example-1-1.jpg], PHOTO UPLOAD TYPE: [Photo Upload]
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:51 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:51 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:52 - Loaded page: Gender
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:52 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:52 - Loaded page: Gender
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:52 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:53 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:53 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:53 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:53 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:54 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:54 - Loaded page: Do you want to submit this photo?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:54 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:54 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:54 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:55 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:55 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:55 - Loaded page: Do you have any passports from other countries?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:55 - DUAL NATIONALITY IS SET TO [true]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:55 - Loaded page: Gender
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:55 - Loaded page: Gender
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:28:56 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:56 - Loaded page: Gender
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:57 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:28:57 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:57 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:28:57 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:28:57 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:57 - Loaded page: Gender
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:28:57 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:28:58 - Loaded page: Do you have a naturalisation or registration certificate?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:28:58 - Loaded page: Family details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:28:59 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:28:59 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:28:59 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:00 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:00 - Loaded page: Family details
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:00 - Loaded page: Apply for a first UK passport
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:00 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:00 - Did not fill Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:00 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:00 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:00 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:01 - Loaded page: Gender
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:01 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:01 - Did not fill Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:01 - Did not fill Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:01 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:01 - Loaded page: Family details
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:02 - Loaded page: Family details
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:02 - Did not fill Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:02 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:02 - Loaded page: Family details
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:02 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:02 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:03 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:03 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:03 - Loaded page: What you’ll need
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:03 - Filled Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:03 - Did not fill Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:04 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:04 - Loaded page: Gender
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:04 - Filled Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:04 - Loaded page: Family details
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:04 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:04 - Did not fill Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:04 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:04 - Loaded page: Gender
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:05 - Loaded page: New passport details
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:05 - Filled Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:05 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:06 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:06 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:06 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:06 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:06 - Filled Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:06 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:06 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:06 - Filled Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:07 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:07 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:07 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:07 - Loaded page: How did you change your name?
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:07 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:07 - Filled Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:08 - Loaded page: Family details
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:08 - Loaded page: Previous names
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:09 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:09 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:09 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:10 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:10 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:10 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:10 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:10 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:10 - Did not fill Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:10 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:10 - Loaded page: Gender
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:11 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:11 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:12 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:12 - Loaded page: Were you born in the UK?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:12 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:12 - Loaded page: Family details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:13 - Filled Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:13 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:13 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:13 - Loaded page: Family details
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:14 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:14 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:15 - Loaded page: New passport
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:15 - Loaded page: New passport
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:15 - Filled Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:15 - Did not fill Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:15 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:15 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:15 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:15 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:15 - Did not fill Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:15 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:16 - Loaded page: Naturalisation or registration details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:16 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:16 - Applicant Can Sign Passport: [false]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:17 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:17 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:17 - Applicant Can Sign Passport: [false]
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:17 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:18 - Filled Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:18 - Loaded page: Family details
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:18 - Loaded page: New passport
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:18 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:18 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:18 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:20 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:20 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:20 - Loaded page: Parents’ details
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:20 - Loaded page: New passport
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:20 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:20 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:20 - Loaded page: New passport
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:20 - Applicant Can Sign Passport: [false]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:20 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:21 - Filled Parent one's first name, last name and date of birth
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:21 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:22 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:22 - Filled Parent two's first name, last name and date of birth
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:22 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:22 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:22 - Applicant Can Sign Passport: [true]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:22 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:22 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:22 - Applicant Can Sign Passport: [true]
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:22 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:22 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:22 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:23 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:23 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:23 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:24 - Loaded page: Mother or parent 1
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:24 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:24 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:24 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:24 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:24 - Loaded page: New passport
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:24 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:25 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:25 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:25 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:25 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:25 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:26 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:26 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:26 - Applicant Can Sign Passport: [true]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:26 - Loaded page: Enter home address
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:26 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:26 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:26 - Loaded page: Father or parent 2
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:26 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:26 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:27 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:28 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:28 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:28 - Loaded page: Declaration
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:28 - Loaded page: Declaration
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:28 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:28 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:28 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:28 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:29 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:29 - Loaded page: Enter home address
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-7] 2023-06-13 14:29:30 - TEST PASSED :)
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-5] 2023-06-13 14:29:30 - TEST PASSED :)
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:30 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:30 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:30 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:30 - Loaded page: New passport
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:30 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:30 - Loaded page: Contact details
+]]></system-out>
+    <system-err><![CDATA[Jun 13, 2023 2:28:10 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+]]></system-err>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey6&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](2)" classname="runners.RunSmokeTest" time="80.858"/>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey4&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](3)" classname="runners.RunSmokeTest" time="83.285">
+    <system-out><![CDATA[[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:31 - Loaded page: Declaration
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:31 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:31 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:31 - Loaded page: Declaration
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:32 - Loaded page: Get updates
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-3] 2023-06-13 14:29:32 - TEST PASSED :)
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:32 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:32 - Applicant Can Sign Passport: [false]
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:32 - Loaded page: Declaration
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-1] 2023-06-13 14:29:33 - TEST PASSED :)
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:33 - Loaded page: What you need to send
+]]></system-out>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey2&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](4)" classname="runners.RunSmokeTest" time="83.802">
+    <system-out><![CDATA[[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:33 - Loaded page: Contact details
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:33 - Loaded page: New passport
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:34 - Loaded page: How should we return your documents?
+]]></system-out>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey1&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](5)" classname="runners.RunSmokeTest" time="84.968">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-0] 2023-06-13 14:29:34 - TEST PASSED :)
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:34 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:35 - Loaded page: Who is the passport for?
+]]></system-out>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey9&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](6)" classname="runners.RunSmokeTest" time="89.371">
+    <system-out><![CDATA[[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:35 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:35 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:35 - Applicant Can Sign Passport: [false]
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:36 - Loaded page: New passport
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:36 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:37 - Loaded page: Get updates
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:37 - Loaded page: Declaration
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:38 - Loaded page: Confirm your identity
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-8] 2023-06-13 14:29:38 - TEST PASSED :)
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:38 - Loaded page: New passport
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:38 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:38 - Applicant Can Sign Passport: [true]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:39 - Loaded page: Who is the passport for?
+]]></system-out>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey10&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](7)" classname="runners.RunSmokeTest" time="98.168">
+    <system-out><![CDATA[[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:39 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:40 - Loaded page: Signing a new passport
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:40 - Applicant Can Sign Passport: [false]
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:41 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:41 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:42 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:43 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:43 - Loaded page: Who is the passport for?
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:44 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:44 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:44 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:45 - Loaded page: Check this application
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:45 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:45 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:46 - Loaded page: Declaration
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:46 - Loaded page: Confirm your identity
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:46 - Loaded page: What you need to send
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                       &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-9] 2023-06-13 14:29:47 - TEST PASSED :)
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:47 - Loaded page: What you need to send
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:47 - Loaded page: Paying for your passport
+]]></system-out>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey3&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](8)" classname="runners.RunSmokeTest" time="101.856">
+    <system-out><![CDATA[[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:48 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:49 - Loaded page: How should we return your documents?
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:49 - Loaded page: Declaration
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:50 - Loaded page: Paying for your passport
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-2] 2023-06-13 14:29:51 - TEST PASSED :)
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:51 - Loaded page: Paying for your passport
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:51 - Loaded page: Declaration
+]]></system-out>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey7&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](9)" classname="runners.RunSmokeTest" time="104.057">
+    <system-out><![CDATA[[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:52 - Loaded page: Declaration
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-6] 2023-06-13 14:29:53 - TEST PASSED :)
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthey apply for a &amp#27;[0m&amp#27;[32m&amp#27;[1mfirst&amp#27;[0m&amp#27;[32m passport with a &amp#27;[0m&amp#27;[32m&amp#27;[1msuccessful&amp#27;[0m&amp#27;[32m payment&amp#27;[0m                                                                      &amp#27;[90m# step_definitions.specifications.SpecificationsStepDefinitions.theyApplyToRenewTheirPassport(java.lang.String,java.lang.String)&amp#27;[0m
+[INFO] [TestNG-PoolService-4] 2023-06-13 14:29:54 - TEST PASSED :)
+]]></system-out>
+  </testcase>
+  <testcase name="runParallelScenario[&quot;Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey5&quot;, &quot;Optional[Customer Journey Transformation Smoke Tests]&quot;](10)" classname="runners.RunSmokeTest" time="105.18"/>
+</testsuite>

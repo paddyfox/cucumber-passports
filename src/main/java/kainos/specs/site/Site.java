@@ -143,8 +143,8 @@ public class Site {
 
     public void verifyPageHeader(String expectedPageHeader, WebElement pageHeaderElement) throws Exception {
         verifyTextInElement(expectedPageHeader, pageHeaderElement);
-
         log.info("Loaded page: {}", expectedPageHeader);
+        AccessibilityBase.checkAllAccessibilityViolations(expectedPageHeader);
     }
 
     public void verifyPageHeaderWelsh(Pair<String, String> expectedPageHeaders, WebElement pageHeaderElement) {

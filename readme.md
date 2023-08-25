@@ -28,3 +28,10 @@ suite XML file e.g. `regression.xml`, `smoke.xml` etc.
 ## Reports
 
 Once you have executed the tests, Cucumber will create a report as `target/cucumber-reports/cucumber-reports.html`.
+
+## Accessibility tests
+
+### The Accessibility Rules
+Axe-core has different types of rules, for WCAG 2.0, 2.1, 2.2 on level A, AA and AAA as well as a number of best practices that help you identify common accessibility practices like ensuring every page has an h1 heading, and to help you avoid "gotchas" in ARIA like where an ARIA attribute you used will get ignored.
+With axe-core, you can find on average 57% of WCAG issues automatically. Additionally, axe-core will return elements as "incomplete" where axe-core could not be certain, and manual review is needed.
+These rules can be changed in: `src/main/java/kainos/specs/site/AccessibilityBase.java` eg `builder.disableRules(Collections.singletonList("autocomplete-valid"));`

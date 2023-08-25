@@ -15,6 +15,7 @@
         <!-- Versions -->
         <!-- A -->
         <appium.version>8.5.1</appium.version>
+        <axe.core.version>4.7.0</axe.core.version>
         <!-- C -->
         <commons-io.version>2.13.0</commons-io.version>
         <cucumber.reporting.version>5.7.6</cucumber.reporting.version>
@@ -49,6 +50,14 @@
 
     <!--DEPENDENCIES-->
     <dependencies>
+
+        <!-- Axe Core -->
+        <dependency>
+            <groupId>com.deque.html.axe-core</groupId>
+            <artifactId>selenium</artifactId>
+            <version>${axe.core.version}</version>
+        </dependency>
+
 
         <!-- TestNG -->
         <dependency>

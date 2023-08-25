@@ -1,5 +1,0 @@
-runners/BaseRunner.class
-runners/RunSmokeTest.class
-step_definitions/steps/SpecificationsStepsFilter.class
-step_definitions/steps/SpecificationsStepsPhoto.class
-step_definitions/steps/SpecificationsStepsApply.class

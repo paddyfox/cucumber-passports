@@ -1,10 +1,10 @@
-package step_definitions.specifications.steps;
+package step_definitions.helpers;
 
-import lombok.extern.slf4j.Slf4j;
 import kainos.specs.site.Site;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class TestEnvironmentSteps extends Site {
+public class TestEnvironmentHelpers extends Site {
 
     public void setupTestEnvironment(String applicantType) {
         // Clear all cookies to prevent any cross browser contamination.

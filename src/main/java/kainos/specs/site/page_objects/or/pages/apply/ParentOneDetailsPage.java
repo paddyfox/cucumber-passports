@@ -1,12 +1,12 @@
 package kainos.specs.site.page_objects.or.pages.apply;
 
+import kainos.specs.countrystore.CountryStore;
+import kainos.specs.datastore.DataStore;
+import kainos.specs.helpers.ApplicantData;
 import kainos.specs.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import kainos.specs.countrystore.CountryStore;
-import kainos.specs.datastore.DataStore;
-import kainos.specs.helpers.ApplicantData;
 
 import static kainos.specs.helpers.ApplicantData.*;
 import static kainos.specs.helpers.CountryHelpers.convertCountryTextToCountryAMSFormat;
@@ -16,16 +16,26 @@ public class ParentOneDetailsPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Mother or parent 1";
     private static final String PAGE_HEADER_WELSH = "Mam neu riant 1";
 
-    @FindBy(tagName = "h1") private WebElement parentOneDetailsPageHeader;
-    @FindBy(id = "parent1TownOfBirth") private WebElement parentOneTownOfBirthField;
-    @FindBy(id = "parent1CountryOfBirth") private WebElement parentOneCountryOfBirthDropdown;
-    @FindBy(id = "parent1Nationality") private WebElement parentOneNationalityField;
-    @FindBy(id = "parent1HasPassport-true-label") private WebElement yesToParentOneHavingUKPassport;
-    @FindBy(id = "parent1HasPassport-false-label") private WebElement noToParentOneHavingUKPassport;
-    @FindBy(id = "parent1PassportNumber") private WebElement parentOnePassportNumberField;
-    @FindBy(id = "parent1PassportIssueDate-day") private WebElement parentOnePassportIssueDateDayField;
-    @FindBy(id = "parent1PassportIssueDate-month") private WebElement parentOnePassportIssueDateMonthField;
-    @FindBy(id = "parent1PassportIssueDate-year") private WebElement parentOnePassportIssueDateYearField;
+    @FindBy(tagName = "h1")
+    private WebElement parentOneDetailsPageHeader;
+    @FindBy(id = "parent1TownOfBirth")
+    private WebElement parentOneTownOfBirthField;
+    @FindBy(id = "parent1CountryOfBirth")
+    private WebElement parentOneCountryOfBirthDropdown;
+    @FindBy(id = "parent1Nationality")
+    private WebElement parentOneNationalityField;
+    @FindBy(id = "parent1HasPassport-true-label")
+    private WebElement yesToParentOneHavingUKPassport;
+    @FindBy(id = "parent1HasPassport-false-label")
+    private WebElement noToParentOneHavingUKPassport;
+    @FindBy(id = "parent1PassportNumber")
+    private WebElement parentOnePassportNumberField;
+    @FindBy(id = "parent1PassportIssueDate-day")
+    private WebElement parentOnePassportIssueDateDayField;
+    @FindBy(id = "parent1PassportIssueDate-month")
+    private WebElement parentOnePassportIssueDateMonthField;
+    @FindBy(id = "parent1PassportIssueDate-year")
+    private WebElement parentOnePassportIssueDateYearField;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, parentOneDetailsPageHeader);

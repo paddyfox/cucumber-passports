@@ -1,24 +1,21 @@
-package step_definitions.specifications.steps;
+package step_definitions.steps;
 
+import kainos.specs.countrystore.CountryStore;
+import kainos.specs.datastore.DataStore;
+import kainos.specs.helpers.ApplicantData;
 import kainos.specs.site.page_objects.or.pages.apply.*;
+import kainos.specs.site.page_objects.or.pages.filter.BirthPage;
+import kainos.specs.site.page_objects.or.pages.photo.PhotoGuideHowToGetADigitalPhotoPage;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import step_definitions.specifications.helpers.SpecificationsStepsHelpers;
-import kainos.specs.countrystore.CountryStore;
-import kainos.specs.datastore.DataStore;
-import kainos.specs.helpers.ApplicantData;
-import kainos.specs.site.page_objects.or.pages.LostOrStolenOldPassportDetailsPage;
-import kainos.specs.site.page_objects.or.pages.filter.BirthPage;
-import kainos.specs.site.page_objects.or.pages.photo.PhotoGuideHowToGetADigitalPhotoPage;
+import step_definitions.helpers.SpecificationsStepsHelpers;
 
 import java.util.Objects;
 
 import static com.google.common.base.Strings.isNullOrEmpty;
 import static kainos.specs.datastore.DataStore.*;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static kainos.specs.helpers.ApplicantData.isAValidApplicationForThisStep;
 import static kainos.specs.site.page_objects.or.constants.StepDefinitionAssertionConstants.OTHER;
 
@@ -31,7 +28,6 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
     private final PhotoGuideHowToGetADigitalPhotoPage photoGuideHowToGetADigitalPhotoPage = PageFactory.initElements(driver, PhotoGuideHowToGetADigitalPhotoPage.class);
     private final BirthPage birthPage = PageFactory.initElements(driver, BirthPage.class);
     private final OldPassportDetailsPage oldPassportDetailsPage = PageFactory.initElements(driver, OldPassportDetailsPage.class);
-    private final LostOrStolenOldPassportDetailsPage lostOrStolenOldPassportDetailsPage = PageFactory.initElements(driver, LostOrStolenOldPassportDetailsPage.class);
     private final NamePage namePage = PageFactory.initElements(driver, NamePage.class);
     private final PreviousNamePage previousNamePage = PageFactory.initElements(driver, PreviousNamePage.class);
     private final GenderPage genderPage = PageFactory.initElements(driver, GenderPage.class);
@@ -43,7 +39,6 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
     private final DeliveryOptionsPage deliveryOptionsPage = PageFactory.initElements(driver, DeliveryOptionsPage.class);
     private final DeclarationPage declarationPage = PageFactory.initElements(driver, DeclarationPage.class);
     private final FinalChecksPage finalChecksPage = PageFactory.initElements(driver, FinalChecksPage.class);
-    private final ApplicationConfirmationPage applicationConfirmationPage = PageFactory.initElements(driver, ApplicationConfirmationPage.class);
     private final NaturalisationDetailsPage naturalisationDetailsPage = PageFactory.initElements(driver, NaturalisationDetailsPage.class);
     private final FamilyDetailsPage familyDetailsPage = PageFactory.initElements(driver, FamilyDetailsPage.class);
     private final ParentsDetailsPage parentsDetailsPage = PageFactory.initElements(driver, ParentsDetailsPage.class);
@@ -114,10 +109,6 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
                 oldPassportDetailsPage.verifyPageHeader();
                 oldPassportDetailsPage.completeOldBluePassportForm(applicant.getExistingPassportNumber(), applicant.getExistingPassportExpiryDate());
                 oldPassportDetailsPage.clickContinue();
-            } else if (applicant.hasLostOrStolenPassport()) {
-                lostOrStolenOldPassportDetailsPage.verifyPageHeader();
-                lostOrStolenOldPassportDetailsPage.completeForm(applicant.getExistingPassportNumber(), applicant.getExistingPassportExpiryDate());
-                lostOrStolenOldPassportDetailsPage.clickContinue();
             } else if (!applicant.isFirstTimeApplication() && !applicant.hasLostOrStolenPassport()) {
                 oldPassportDetailsPage.verifyPageHeader();
                 oldPassportDetailsPage.completeOldNonBluePassportForm(applicant.getExistingPassportNumber(), applicant.getExistingPassportExpiryDate());
@@ -196,12 +187,10 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
             if ((applicant.isChild() || applicant.isFirstTimeApplication()) || (applicant.hasSpecialIssueDate() && (applicant.isOverseas() && applicant.hasOtherIssuingAuthority()) || (!applicant.isOverseas() && applicant.isAHiddenFirstTimeApplicant()))) {
                 parentsDetailsPage.verifyPageHeader();
                 boolean fillParentOnesDetails = Math.random() > 0.5;
-                if(fillParentOnesDetails) {
+                if (fillParentOnesDetails) {
                     parentsDetailsPage.completeParentOneForm(applicant);
                     log.info("Filled Parent one's first name, last name and date of birth");
-                }
-
-                else {
+                } else {
                     DataStore.setDataKey(PARENT_ONE_FIRST_NAME, null);
                     DataStore.setDataKey(PARENT_ONE_LAST_NAME, null);
                     DataStore.setDataKey(PARENT_ONE_BIRTH_DATE, null);
@@ -210,12 +199,10 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
                 }
 
                 boolean fillParentTwosDetails = Math.random() > 0.5;
-                if(fillParentTwosDetails) {
+                if (fillParentTwosDetails) {
                     parentsDetailsPage.completeParentTwoForm(applicant);
                     log.info("Filled Parent two's first name, last name and date of birth");
-                }
-
-                else {
+                } else {
                     DataStore.setDataKey(PARENT_TWO_FIRST_NAME, null);
                     DataStore.setDataKey(PARENT_TWO_LAST_NAME, null);
                     DataStore.setDataKey(PARENT_TWO_BIRTH_DATE, null);
@@ -386,26 +373,14 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
 
     public SpecificationsStepsApply continuesThroughConfirmYourIdentityPage() throws Exception {
         if (isAValidApplicationForThisStep()) {
-            if (requiresADigitalReferee(applicant) && !applicant.isPremium() && !applicant.isCompassionate()) {
-                confirmYourIdentityPage.verifyPageHeader();
-                confirmYourIdentityPage.clickContinue();
-            }
+            confirmYourIdentityPage.verifyPageHeader();
+            confirmYourIdentityPage.clickContinue();
         }
 
         return this;
     }
 
     public SpecificationsStepsApply continuesThroughOtherDocumentsPage() throws Exception {
-        if (!isAValidApplicationForThisStep()
-                || applicant.isPremium()
-                || (applicant.hasLostOrStolenPassport() && !applicant.isChild()
-                && getCountryOfApplicationGroupNumber(applicant.getCountryCodeOfApplication()) == 1
-                && !applicant.hasChangedTheirName())
-                && !(applicant.isADualNational())
-        ) {
-            return this;
-        }
-
         documentsPage.verifyPageHeader();
 
         if (applicant.isChild()
@@ -422,20 +397,15 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
                 documentsPage.selectDocumentsToSendYesRadio();
             }
         }
-
-        if (!isNullOrEmpty(DataStore.getDataKey(APPLICANT_EUSS_STATUS)) && "Yes".equalsIgnoreCase(DataStore.getDataKey(APPLICANT_EUSS_STATUS))) {
-            assertThat(documentsPage.getDetailsFromParentsDocuments(), containsString("EU Settlement Scheme application reference"));
-        }
-
         documentsPage.clickContinue();
 
         return this;
     }
 
     public SpecificationsStepsApply choosesDeliveryOptions() throws Exception {
-            deliveryOptionsPage.verifyPageHeader();
-            deliveryOptionsPage.chooseDeliveryOptions(applicant.getDesiredDeliveryType());
-            deliveryOptionsPage.clickContinue();
+        deliveryOptionsPage.verifyPageHeader();
+        deliveryOptionsPage.chooseDeliveryOptions(applicant.getDesiredDeliveryType());
+        deliveryOptionsPage.clickContinue();
 
         return this;
     }
@@ -487,21 +457,19 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
                 grandParentsDetailsPage.clickContinue();
                 boolean fillMaternalGrandParentOnesDetails = Math.random() > 0.5;
                 boolean fillMaternalGrandParentTwosDetails = Math.random() > 0.5;
-                if(fillMaternalGrandParentOnesDetails) {
+                if (fillMaternalGrandParentOnesDetails) {
                     maternalGrandparentsDetailsPage.completeMaternalGrandParentOnesForm(applicant);
                     log.info("Filled Maternal Grandmother's first name, last name and date of birth");
-                }
-                else {
+                } else {
                     DataStore.setDataKey(MATERNAL_GRAND_PARENT_ONE_FIRST_NAME, null);
                     DataStore.setDataKey(MATERNAL_GRAND_PARENT_ONE_LAST_NAME, null);
                     maternalGrandparentsDetailsPage.enterWhyICannotProvideMaternalGrandMotherDetails();
                     log.info("Did not fill Maternal Grandmother's first name, last name and date of birth");
                 }
-                if(fillMaternalGrandParentTwosDetails) {
+                if (fillMaternalGrandParentTwosDetails) {
                     maternalGrandparentsDetailsPage.completeMaternalGrandParentTwosForm(applicant);
                     log.info("Filled Maternal Grandfather's first name, last name and date of birth");
-                }
-                else {
+                } else {
                     DataStore.setDataKey(MATERNAL_GRAND_PARENT_TWO_FIRST_NAME, null);
                     DataStore.setDataKey(MATERNAL_GRAND_PARENT_TWO_LAST_NAME, null);
                     maternalGrandparentsDetailsPage.enterWhyICannotProvideMaternalGrandFatherDetails();
@@ -511,21 +479,19 @@ public class SpecificationsStepsApply extends SpecificationsStepsHelpers {
                 maternalGrandparentsDetailsPage.clickContinue();
                 boolean fillPaternalGrandParentOnesDetails = Math.random() > 0.5;
                 boolean fillPaternalGrandParentTwosDetails = Math.random() > 0.5;
-                if(fillPaternalGrandParentOnesDetails) {
+                if (fillPaternalGrandParentOnesDetails) {
                     paternalGrandparentsDetailsPage.completePaternalGrandParentOnesForm(applicant);
                     log.info("Filled Paternal Grandmother's first name, last name and date of birth");
-                }
-                else {
+                } else {
                     DataStore.setDataKey(PATERNAL_GRAND_PARENT_ONE_FIRST_NAME, null);
                     DataStore.setDataKey(PATERNAL_GRAND_PARENT_ONE_LAST_NAME, null);
                     paternalGrandparentsDetailsPage.enterWhyICannotProvidePaternalGrandMotherDetails();
                     log.info("Did not fill Paternal Grandmother's first name, last name and date of birth");
                 }
-                if(fillPaternalGrandParentTwosDetails) {
+                if (fillPaternalGrandParentTwosDetails) {
                     paternalGrandparentsDetailsPage.completePaternalGrandParentTwosForm(applicant);
                     log.info("Filled Paternal Grandfather's first name, last name and date of birth");
-                }
-                else {
+                } else {
                     DataStore.setDataKey(PATERNAL_GRAND_PARENT_TWO_FIRST_NAME, null);
                     DataStore.setDataKey(PATERNAL_GRAND_PARENT_TWO_LAST_NAME, null);
                     paternalGrandparentsDetailsPage.enterWhyICannotProvidePaternalGrandFatherDetails();

@@ -9,9 +9,12 @@ public class GenderPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Gender";
     private static final String PAGE_HEADER_WELSH = "Rhywedd";
 
-    @FindBy(className = "govuk-fieldset__heading") private WebElement genderPageHeader;
-    @FindBy(id = "gender-Male-label") private WebElement maleGenderButton;
-    @FindBy(id = "gender-Female-label") private WebElement femaleGenderButton;
+    @FindBy(className = "govuk-fieldset__heading")
+    private WebElement genderPageHeader;
+    @FindBy(id = "gender-Male-label")
+    private WebElement maleGenderButton;
+    @FindBy(id = "gender-Female-label")
+    private WebElement femaleGenderButton;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, genderPageHeader);

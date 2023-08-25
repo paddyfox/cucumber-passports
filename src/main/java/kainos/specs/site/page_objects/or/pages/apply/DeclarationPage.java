@@ -9,8 +9,10 @@ public class DeclarationPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Declaration";
     private static final String PAGE_HEADER_WELSH = "Datganiad";
 
-    @FindBy(tagName = "h1") private WebElement declarationPageHeader;
-    @FindBy(id = "declaration-label") private WebElement declarationCheckbox;
+    @FindBy(tagName = "h1")
+    private WebElement declarationPageHeader;
+    @FindBy(id = "declaration-label")
+    private WebElement declarationCheckbox;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, declarationPageHeader);

@@ -1,5 +1,6 @@
 package kainos.specs.site.page_objects.or.pages.filter;
 
+import kainos.specs.datastore.DataStore;
 import kainos.specs.helpers.CountryHelpers;
 import kainos.specs.site.Site;
 import lombok.extern.slf4j.Slf4j;
@@ -7,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import kainos.specs.datastore.DataStore;
 
 import java.util.HashMap;
 
@@ -16,15 +16,6 @@ public class OverseasPage extends Site {
 
     private static final String PAGE_HEADER_ENGLISH = "Do you live in the UK?";
     private static final String PAGE_HEADER_WELSH = "A ydych yn byw yn y Deyrnas Unedig?";
-
-    @FindBy(className = "govuk-fieldset__heading") private WebElement pageHeader;
-    @FindBy(id = "isUKApplication-true-label") private WebElement applyFromUkButton;
-    @FindBy(id = "isUKApplication-false-label") private WebElement applyFromOverseasButton;
-
-    public void verifyPageHeader() throws Exception {
-        verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, pageHeader);
-    }
-
     private static final HashMap<String, String> countries;
 
     static {
@@ -39,7 +30,7 @@ public class OverseasPage extends Site {
         countries.put("Italy", "IT");
         countries.put("Laos", "LA");
         countries.put("Libya", "LY");
-        countries.put("Mongolia","MN");
+        countries.put("Mongolia", "MN");
         countries.put("North Korea", "KP");
         countries.put("Pitcairn Island", "PN");
         countries.put("Saint Helena", "SH");
@@ -54,6 +45,17 @@ public class OverseasPage extends Site {
         countries.put("Yemen", "YE");
         countries.put("Australia", "AU");
         countries.put("Aruba", "AW");
+    }
+
+    @FindBy(className = "govuk-fieldset__heading")
+    private WebElement pageHeader;
+    @FindBy(id = "isUKApplication-true-label")
+    private WebElement applyFromUkButton;
+    @FindBy(id = "isUKApplication-false-label")
+    private WebElement applyFromOverseasButton;
+
+    public void verifyPageHeader() throws Exception {
+        verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, pageHeader);
     }
 
     public void clickNoForApplyingFromUk() {

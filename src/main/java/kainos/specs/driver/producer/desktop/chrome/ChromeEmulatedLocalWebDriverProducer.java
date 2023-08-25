@@ -1,7 +1,6 @@
 package kainos.specs.driver.producer.desktop.chrome;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import kainos.specs.driver.producer.BaseLocalDriver;
 import kainos.specs.driver.producer.WebDriverProducer;
 import org.openqa.selenium.WebDriver;

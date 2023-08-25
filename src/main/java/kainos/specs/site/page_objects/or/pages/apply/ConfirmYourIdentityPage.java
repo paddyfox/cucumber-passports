@@ -9,7 +9,10 @@ public class ConfirmYourIdentityPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Confirm your identity";
     private static final String PAGE_HEADER_WELSH = "Cadarnhau pwy ydych chi";
 
-    @FindBy(tagName = "h1") private WebElement confirmYourIdentityPageHeader;
+    @FindBy(tagName = "h1")
+    private WebElement confirmYourIdentityPageHeader;
 
-    public void verifyPageHeader() throws Exception { verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, confirmYourIdentityPageHeader); }
+    public void verifyPageHeader() throws Exception {
+        verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, confirmYourIdentityPageHeader);
+    }
 }

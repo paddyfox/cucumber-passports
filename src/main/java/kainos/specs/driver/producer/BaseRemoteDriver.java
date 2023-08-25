@@ -1,19 +1,17 @@
 package kainos.specs.driver.producer;
 
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 import kainos.specs.ProjectEntity;
 import kainos.specs.environment.Environment;
 import kainos.specs.properties.BrowserstackProperties;
 import kainos.specs.properties.CommonProperties;
 import kainos.specs.properties.PropertyLoader;
+import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
-
-import lombok.extern.slf4j.Slf4j;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;

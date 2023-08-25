@@ -1,9 +1,9 @@
 package runners;
 
 import io.cucumber.testng.CucumberOptions;
+import kainos.specs.listener.EventListener;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.Listeners;
-import kainos.specs.listener.EventListener;
 
 @CucumberOptions(
         features = "src/test/resources/features",

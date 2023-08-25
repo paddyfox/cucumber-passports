@@ -9,10 +9,14 @@ public class YourNewPassportPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "New passport";
     private static final String PAGE_HEADER_WELSH = "Pasbort newydd";
 
-    @FindBy(tagName = "h1") private WebElement yourNewPassportPageHeader;
-    @FindBy(id = "largePassport-true-label") private WebElement frequentTravellerPassportButton;
-    @FindBy(id = "largePassport-false-label") private WebElement standardPassportButton;
-    @FindBy(id = "braille-label") private WebElement brailleStickerButton;
+    @FindBy(tagName = "h1")
+    private WebElement yourNewPassportPageHeader;
+    @FindBy(id = "largePassport-true-label")
+    private WebElement frequentTravellerPassportButton;
+    @FindBy(id = "largePassport-false-label")
+    private WebElement standardPassportButton;
+    @FindBy(id = "braille-label")
+    private WebElement brailleStickerButton;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, yourNewPassportPageHeader);

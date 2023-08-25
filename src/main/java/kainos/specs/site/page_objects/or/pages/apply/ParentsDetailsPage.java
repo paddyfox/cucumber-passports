@@ -1,10 +1,10 @@
 package kainos.specs.site.page_objects.or.pages.apply;
 
+import kainos.specs.datastore.DataStore;
+import kainos.specs.helpers.ApplicantData;
 import kainos.specs.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import kainos.specs.datastore.DataStore;
-import kainos.specs.helpers.ApplicantData;
 
 import java.time.LocalDate;
 
@@ -19,26 +19,46 @@ public class ParentsDetailsPage extends Site {
 
     public static String PARENTS_MARRIED_STATUS_KEY;
 
-    @FindBy(tagName = "h1") private WebElement parentsDetailsPageHeader;
-    @FindBy(id = "parent1FirstName") private WebElement parentOneFirstNameField;
-    @FindBy(id = "parent1LastName") private WebElement parentOneLastNameField;
-    @FindBy(id = "parent2FirstName") private WebElement parentTwoFirstNameField;
-    @FindBy(id = "parent2LastName") private WebElement parentTwoLastNameField;
-    @FindBy(id = "parent1DateOfBirth-day") private WebElement dobDayFieldParentOne;
-    @FindBy(id = "parent1DateOfBirth-month") private WebElement dobMonthFieldParentOne;
-    @FindBy(id = "parent1DateOfBirth-year") private WebElement dobYearFieldParentOne;
-    @FindBy(id = "parent2DateOfBirth-day") private WebElement dobDayFieldParentTwo;
-    @FindBy(id = "parent2DateOfBirth-month") private WebElement dobMonthFieldParentTwo;
-    @FindBy(id = "parent2DateOfBirth-year") private WebElement dobYearFieldParentTwo;
-    @FindBy(id = "parentsMarriageDate-day") private WebElement marriageDateDayParentsField;
-    @FindBy(id = "parentsMarriageDate-month") private WebElement marriageDateMonthParentsField;
-    @FindBy(id = "parentsMarriageDate-year") private WebElement marriageDateYearParentsField;
-    @FindBy(id = "parent1NoDetailsReason") private WebElement insertReasonForParentOneField;
-    @FindBy(id = "parent2NoDetailsReason") private WebElement insertReasonForParentTwoField;
-    @FindBy(id = "parentsMarried-true-label") private WebElement yesToParentsMarriedOrInCivilPartnershipButton;
-    @FindBy(id = "parentsMarried-false-label") private WebElement noToParentsMarriedOrInCivilPartnershipButton;
-    @FindBy(css = "#parent1ReasonReveal > summary > span") private WebElement cantProvideParentOneDetailsLink;
-    @FindBy(css = "#parent2ReasonReveal > summary > span") private WebElement cantProvideParentTwoDetailsLink;
+    @FindBy(tagName = "h1")
+    private WebElement parentsDetailsPageHeader;
+    @FindBy(id = "parent1FirstName")
+    private WebElement parentOneFirstNameField;
+    @FindBy(id = "parent1LastName")
+    private WebElement parentOneLastNameField;
+    @FindBy(id = "parent2FirstName")
+    private WebElement parentTwoFirstNameField;
+    @FindBy(id = "parent2LastName")
+    private WebElement parentTwoLastNameField;
+    @FindBy(id = "parent1DateOfBirth-day")
+    private WebElement dobDayFieldParentOne;
+    @FindBy(id = "parent1DateOfBirth-month")
+    private WebElement dobMonthFieldParentOne;
+    @FindBy(id = "parent1DateOfBirth-year")
+    private WebElement dobYearFieldParentOne;
+    @FindBy(id = "parent2DateOfBirth-day")
+    private WebElement dobDayFieldParentTwo;
+    @FindBy(id = "parent2DateOfBirth-month")
+    private WebElement dobMonthFieldParentTwo;
+    @FindBy(id = "parent2DateOfBirth-year")
+    private WebElement dobYearFieldParentTwo;
+    @FindBy(id = "parentsMarriageDate-day")
+    private WebElement marriageDateDayParentsField;
+    @FindBy(id = "parentsMarriageDate-month")
+    private WebElement marriageDateMonthParentsField;
+    @FindBy(id = "parentsMarriageDate-year")
+    private WebElement marriageDateYearParentsField;
+    @FindBy(id = "parent1NoDetailsReason")
+    private WebElement insertReasonForParentOneField;
+    @FindBy(id = "parent2NoDetailsReason")
+    private WebElement insertReasonForParentTwoField;
+    @FindBy(id = "parentsMarried-true-label")
+    private WebElement yesToParentsMarriedOrInCivilPartnershipButton;
+    @FindBy(id = "parentsMarried-false-label")
+    private WebElement noToParentsMarriedOrInCivilPartnershipButton;
+    @FindBy(css = "#parent1ReasonReveal > summary > span")
+    private WebElement cantProvideParentOneDetailsLink;
+    @FindBy(css = "#parent2ReasonReveal > summary > span")
+    private WebElement cantProvideParentTwoDetailsLink;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, parentsDetailsPageHeader);
@@ -102,7 +122,7 @@ public class ParentsDetailsPage extends Site {
     }
 
     public void enterWhyICannotProvideParentOneDetails() {
-        if(cantProvideParentOneDetailsLink.getAttribute("open") == null) {
+        if (cantProvideParentOneDetailsLink.getAttribute("open") == null) {
             clickOnElement(cantProvideParentOneDetailsLink);
         }
         enterTextIntoTheField(insertReasonForParentOneField, CANNOT_PROVIDE_PARENT_ONE_DETAILS);
@@ -110,7 +130,7 @@ public class ParentsDetailsPage extends Site {
     }
 
     public void enterWhyICannotProvideParentTwoDetails() {
-        if(cantProvideParentTwoDetailsLink.getAttribute("open") == null) {
+        if (cantProvideParentTwoDetailsLink.getAttribute("open") == null) {
             clickOnElement(cantProvideParentTwoDetailsLink);
         }
         enterTextIntoTheField(insertReasonForParentTwoField, CANNOT_PROVIDE_PARENT_TWO_DETAILS);
@@ -120,8 +140,7 @@ public class ParentsDetailsPage extends Site {
     public void choosesParentsMarriedOrNot(Boolean parentsMarried) {
         if (parentsMarried) {
             clickYesForMyParentsMarriedOrInCivilPartnership();
-        }
-        else {
+        } else {
             clickNoForMyParentsMarriedOrInCivilPartnership();
             clickContinue();
         }

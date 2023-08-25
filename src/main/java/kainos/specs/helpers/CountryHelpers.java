@@ -1,9 +1,9 @@
 package kainos.specs.helpers;
 
+import kainos.specs.datastore.DataStore;
 import lombok.experimental.UtilityClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import kainos.specs.datastore.DataStore;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -23,8 +23,7 @@ public class CountryHelpers {
             DataStore.setDataKey(DataStore.APPLICANT_COUNTRY_OF_BIRTH, countryOfBirthName);
             DataStore.setDataKey(DataStore.APPLICANT_COUNTRY_OF_BIRTH_AMS, countryOfBirthName);
             DataStore.setDataKey(DataStore.APPLICANT_COUNTRY_OF_BIRTH_URL, countryOfBirthURL);
-        }
-        else {
+        } else {
             DataStore.setDataKey(dataKey, countryOfBirthName);
         }
     }

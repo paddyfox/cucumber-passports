@@ -1,9 +1,9 @@
 package kainos.specs.site.page_objects.or.pages.filter;
 
+import kainos.specs.datastore.DataStore;
 import kainos.specs.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import kainos.specs.datastore.DataStore;
 
 import java.time.LocalDate;
 
@@ -12,10 +12,14 @@ public class AgePage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Date of birth";
     private static final String PAGE_HEADER_WELSH = "Dyddiad geni";
 
-    @FindBy(className = "govuk-fieldset__heading") private WebElement pageHeader;
-    @FindBy(id = "dateOfBirth-day") private WebElement dobDayField;
-    @FindBy(id = "dateOfBirth-month") private WebElement dobMonthField;
-    @FindBy(id = "dateOfBirth-year") private WebElement dobYearField;
+    @FindBy(className = "govuk-fieldset__heading")
+    private WebElement pageHeader;
+    @FindBy(id = "dateOfBirth-day")
+    private WebElement dobDayField;
+    @FindBy(id = "dateOfBirth-month")
+    private WebElement dobMonthField;
+    @FindBy(id = "dateOfBirth-year")
+    private WebElement dobYearField;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, pageHeader);

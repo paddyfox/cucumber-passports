@@ -1,12 +1,12 @@
 package kainos.specs.site.page_objects.or.pages.apply;
 
+import kainos.specs.countrystore.CountryStore;
+import kainos.specs.datastore.DataStore;
+import kainos.specs.helpers.ApplicantData;
 import kainos.specs.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import kainos.specs.countrystore.CountryStore;
-import kainos.specs.datastore.DataStore;
-import kainos.specs.helpers.ApplicantData;
 
 import java.time.LocalDate;
 
@@ -20,32 +20,58 @@ public class PaternalGrandparentsDetailsPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Paternal grandparents";
     private static final String PAGE_HEADER_WELSH = "Nain a thaid tadol";
 
-    @FindBy(tagName = "h1") private WebElement paternalGrandparentsDetailsPageHeader;
-    @FindBy(id = "parent2-parent1-first-name") private WebElement paternalGrandParentOneFirstNameField;
-    @FindBy(id = "parent2-parent1-last-name") private WebElement paternalGrandParentOneLastNameField;
-    @FindBy(id = "parent2-parent2-first-name") private WebElement paternalGrandParentTwoFirstNameField;
-    @FindBy(id = "parent2-parent2-last-name") private WebElement paternalGrandParentTwoLastNameField;
-    @FindBy(id = "parent2-parent1-date-of-birth-day") private WebElement dobDayFieldPaternalGrandParentOne;
-    @FindBy(id = "parent2-parent1-date-of-birth-month") private WebElement dobMonthFieldPaternalGrandParentOne;
-    @FindBy(id = "parent2-parent1-date-of-birth-year") private WebElement dobYearFieldPaternalGrandParentOne;
-    @FindBy(id = "parent2-parent2-date-of-birth-day") private WebElement dobDayFieldPaternalGrandParentTwo;
-    @FindBy(id = "parent2-parent2-date-of-birth-month") private WebElement dobMonthFieldPaternalGrandParentTwo;
-    @FindBy(id = "parent2-parent2-date-of-birth-year") private WebElement dobYearFieldPaternalGrandParentTwo;
-    @FindBy(id = "parent2-parents-marriage-date-day") private WebElement marriageDateDayPaternalGrandParentsField;
-    @FindBy(id = "parent2-parents-marriage-date-month") private WebElement marriageDateMonthPaternalGrandParentsField;
-    @FindBy(id = "parent2-parents-marriage-date-year") private WebElement marriageDateYearPaternalGrandParentsField;
-    @FindBy(id = "parent2-parent1-no-details-reason") private WebElement insertReasonForPaternalGrandMotherField;
-    @FindBy(id = "parent2-parent2-no-details-reason") private WebElement insertReasonForPaternalGrandFatherField;
-    @FindBy(id = "parent2-parent1-town-of-birth") private WebElement paternalGrandParentOneTownOfBirthField;
-    @FindBy(id = "parent2-parent2-town-of-birth") private WebElement paternalGrandParentTwoTownOfBirthField;
-    @FindBy(css = "#parent2-parent1-reason-reveal > summary > span") private WebElement cantProvidePaternalGrandMotherDetailsLink;
-    @FindBy(css = "#parent2-parent1-reason-reveal") private WebElement cantProvidePaternalGrandMotherDetailsLinkEdit;
-    @FindBy(css = "#parent2-parent2-reason-reveal > summary > span") private WebElement cantProvidePaternalGrandFatherDetailsLink;
-    @FindBy(css = "#parent2-parent2-reason-reveal") private WebElement cantProvidePaternalGrandFatherDetailsLinkEdit;
-    @FindBy(id = "parent2-parent1-country-of-birth") private WebElement paternalGrandmotherCountryOfBirthDropdown;
-    @FindBy(id = "parent2-parent2-country-of-birth") private WebElement paternalGrandfatherCountryOfBirthDropdown;
-    @FindBy(id = "parent2-parents-married-true-label") private WebElement yesForMyParentTwosParentsMarriedOrInCivilPartnership;
-    @FindBy(id = "parent2-parents-married-false-label") private WebElement noForMyParentTwosParentsMarriedOrInCivilPartnership;
+    @FindBy(tagName = "h1")
+    private WebElement paternalGrandparentsDetailsPageHeader;
+    @FindBy(id = "parent2-parent1-first-name")
+    private WebElement paternalGrandParentOneFirstNameField;
+    @FindBy(id = "parent2-parent1-last-name")
+    private WebElement paternalGrandParentOneLastNameField;
+    @FindBy(id = "parent2-parent2-first-name")
+    private WebElement paternalGrandParentTwoFirstNameField;
+    @FindBy(id = "parent2-parent2-last-name")
+    private WebElement paternalGrandParentTwoLastNameField;
+    @FindBy(id = "parent2-parent1-date-of-birth-day")
+    private WebElement dobDayFieldPaternalGrandParentOne;
+    @FindBy(id = "parent2-parent1-date-of-birth-month")
+    private WebElement dobMonthFieldPaternalGrandParentOne;
+    @FindBy(id = "parent2-parent1-date-of-birth-year")
+    private WebElement dobYearFieldPaternalGrandParentOne;
+    @FindBy(id = "parent2-parent2-date-of-birth-day")
+    private WebElement dobDayFieldPaternalGrandParentTwo;
+    @FindBy(id = "parent2-parent2-date-of-birth-month")
+    private WebElement dobMonthFieldPaternalGrandParentTwo;
+    @FindBy(id = "parent2-parent2-date-of-birth-year")
+    private WebElement dobYearFieldPaternalGrandParentTwo;
+    @FindBy(id = "parent2-parents-marriage-date-day")
+    private WebElement marriageDateDayPaternalGrandParentsField;
+    @FindBy(id = "parent2-parents-marriage-date-month")
+    private WebElement marriageDateMonthPaternalGrandParentsField;
+    @FindBy(id = "parent2-parents-marriage-date-year")
+    private WebElement marriageDateYearPaternalGrandParentsField;
+    @FindBy(id = "parent2-parent1-no-details-reason")
+    private WebElement insertReasonForPaternalGrandMotherField;
+    @FindBy(id = "parent2-parent2-no-details-reason")
+    private WebElement insertReasonForPaternalGrandFatherField;
+    @FindBy(id = "parent2-parent1-town-of-birth")
+    private WebElement paternalGrandParentOneTownOfBirthField;
+    @FindBy(id = "parent2-parent2-town-of-birth")
+    private WebElement paternalGrandParentTwoTownOfBirthField;
+    @FindBy(css = "#parent2-parent1-reason-reveal > summary > span")
+    private WebElement cantProvidePaternalGrandMotherDetailsLink;
+    @FindBy(css = "#parent2-parent1-reason-reveal")
+    private WebElement cantProvidePaternalGrandMotherDetailsLinkEdit;
+    @FindBy(css = "#parent2-parent2-reason-reveal > summary > span")
+    private WebElement cantProvidePaternalGrandFatherDetailsLink;
+    @FindBy(css = "#parent2-parent2-reason-reveal")
+    private WebElement cantProvidePaternalGrandFatherDetailsLinkEdit;
+    @FindBy(id = "parent2-parent1-country-of-birth")
+    private WebElement paternalGrandmotherCountryOfBirthDropdown;
+    @FindBy(id = "parent2-parent2-country-of-birth")
+    private WebElement paternalGrandfatherCountryOfBirthDropdown;
+    @FindBy(id = "parent2-parents-married-true-label")
+    private WebElement yesForMyParentTwosParentsMarriedOrInCivilPartnership;
+    @FindBy(id = "parent2-parents-married-false-label")
+    private WebElement noForMyParentTwosParentsMarriedOrInCivilPartnership;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, paternalGrandparentsDetailsPageHeader);

@@ -1,7 +1,7 @@
 package kainos.specs.environment;
 
-import lombok.extern.slf4j.Slf4j;
 import kainos.specs.properties.PropertyLoader;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Get the URL config from file based on environment variables.
@@ -14,15 +14,15 @@ import kainos.specs.properties.PropertyLoader;
 @Slf4j
 public class ProductEnvironmentConfiguration {
 
-    public static ProductEnvironmentConfiguration getWithDefault() {
-        String environmentName = Environment.getEnvironmentName();
-        return new ProductEnvironmentConfiguration(environmentName);
-    }
-
     public ProductEnvironmentConfiguration(String environmentName) {
         if (environmentName == null || environmentName.isEmpty()) {
             throw new IllegalArgumentException("Test environment must be specified.");
         }
+    }
+
+    public static ProductEnvironmentConfiguration getWithDefault() {
+        String environmentName = Environment.getEnvironmentName();
+        return new ProductEnvironmentConfiguration(environmentName);
     }
 
     private String getProperty(String key) {

@@ -9,9 +9,12 @@ public class OtherPassportsPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Do you have any passports from other countries?";
     private static final String PAGE_HEADER_WELSH = "A oes gennych unrhyw basbortau o wledydd eraill?";
 
-    @FindBy(className = "govuk-fieldset__heading") private WebElement pageHeader;
-    @FindBy(id = "otherPassports-true-label") private WebElement hasOtherPassportsButton;
-    @FindBy(id = "otherPassports-false-label") private WebElement noOtherPassportsButton;
+    @FindBy(className = "govuk-fieldset__heading")
+    private WebElement pageHeader;
+    @FindBy(id = "otherPassports-true-label")
+    private WebElement hasOtherPassportsButton;
+    @FindBy(id = "otherPassports-false-label")
+    private WebElement noOtherPassportsButton;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, pageHeader);
@@ -20,8 +23,7 @@ public class OtherPassportsPage extends Site {
     public void selectIfHasOtherPassports(Boolean hasOtherPassports) {
         if (hasOtherPassports) {
             clickOnElement(hasOtherPassportsButton);
-        }
-        else {
+        } else {
             clickOnElement(noOtherPassportsButton);
         }
     }

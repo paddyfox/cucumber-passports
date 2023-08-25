@@ -1,9 +1,9 @@
 package kainos.specs.helpers;
 
+import kainos.specs.datastore.DataStore;
 import kainos.specs.site.page_objects.or.constants.StepDefinitionAssertionConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.time.DateTime;
-import kainos.specs.datastore.DataStore;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -21,6 +21,12 @@ import static java.util.Objects.*;
 @Slf4j
 public class ApplicantData extends TestData {
 
+    public static final String PARENT_ONE_PASSPORT_ISSUE_DATE_DAY = "parentOnePassportIssueDateDay";
+    public static final String PARENT_ONE_PASSPORT_ISSUE_DATE_MONTH = "parentOnePassportIssueDateMonth";
+    public static final String PARENT_ONE_PASSPORT_ISSUE_DATE_YEAR = "parentOnePassportIssueDateYear";
+    public static final String PARENT_TWO_PASSPORT_ISSUE_DATE_DAY = "parentTwoPassportIssueDateDay";
+    public static final String PARENT_TWO_PASSPORT_ISSUE_DATE_MONTH = "parentTwoPassportIssueDateMonth";
+    public static final String PARENT_TWO_PASSPORT_ISSUE_DATE_YEAR = "parentTwoPassportIssueDateYear";
     private static final String DOB_KEY = "dateOfBirth";
     private static final String OVERSEAS_KEY = "isOverseas";
     private static final String TITLE_KEY = "title";
@@ -55,12 +61,10 @@ public class ApplicantData extends TestData {
     private static final String DESIRED_DELIVERY_TYPE_KEY = "desiredDeliveryType";
     private static final String PREMIUM_KEY = "isPremium";
     private static final String COMPASSIONATE_KEY = "isCompassionate";
-    private static final String OFFICE_USE_KEY = "isOfficeUse";
     private static final String POL_KEY = "isPOL";
     private static final String NAME_CHANGE_KEY = "hasNameChange";
     private static final String PASSPORT_DAMAGED_KEY = "isPassportDamaged";
     private static final String LOST_OR_STOLEN_KEY = "isLostOrStolen";
-    private static final String HAS_CANCELLED_PASSPORT = "hasCancelledPassport";
     private static final String EUSS_STATUS_KEY = "EUSSStatus";
     private static final String FIRST_TIME_APPLICANT_KEY = "isFirstTimeApplication";
     private static final String HAS_NATURALISATION_CERTIFICATE_KEY = "hasNaturalisationCertificate";
@@ -74,8 +78,6 @@ public class ApplicantData extends TestData {
     private static final String PARENT_ONES_PARENT_ONE_LAST_NAME_KEY = "parentOnesParentOneLastName";
     private static final String PARENT_ONES_PARENT_ONE_TOWN_OF_BIRTH_KEY = "parentOnesParentOneTownOfBirth";
     private static final String PARENT_ONES_PARENT_TWO_TOWN_OF_BIRTH_KEY = "parentOnesParentTwoTownOfBirth";
-    private static final String PARENT_ONES_PARENT_ONE_COUNTRY_OF_BIRTH_KEY = "maternalGrandmotherCountryOfBirth";
-    private static final String PARENT_ONES_PARENT_TWO_COUNTRY_OF_BIRTH_KEY = "maternalGrandfatherCountryOfBirth";
     private static final String PARENT_ONES_PARENT_ONE_BIRTH_DATE_KEY = "parentOnesParentOneBirthDate";
     private static final String PARENT_ONES_PARENT_TWO_BIRTH_DATE_KEY = "parentOnesParentTwoBirthDate";
     private static final String PARENT_ONES_PARENTS_MARRIAGE_DATE_KEY = "parentOnesParentsMarriageDate";
@@ -90,8 +92,6 @@ public class ApplicantData extends TestData {
     private static final String PARENT_TWOS_PARENT_ONE_LAST_NAME_KEY = "parentTwosParentOneLastName";
     private static final String PARENT_TWOS_PARENT_ONE_TOWN_OF_BIRTH_KEY = "parentTwosParentOneTownOfBirth";
     private static final String PARENT_TWOS_PARENT_TWO_TOWN_OF_BIRTH_KEY = "parentTwosParentTwoTownOfBirth";
-    private static final String PARENT_TWOS_PARENT_ONE_COUNTRY_OF_BIRTH_KEY = "paternalGrandmotherCountryOfBirth";
-    private static final String PARENT_TWOS_PARENT_TWO_COUNTRY_OF_BIRTH_KEY = "paternalGrandfatherCountryOfBirth";
     private static final String PARENT_TWOS_PARENT_ONE_BIRTH_DATE_KEY = "parentTwosParentOneBirthDate";
     private static final String PARENT_TWOS_PARENT_TWO_BIRTH_DATE_KEY = "parentTwosParentTwoBirthDate";
     private static final String PARENT_TWOS_PARENT_TWO_FIRST_NAME_KEY = "parentTwosParentTwoFirstName";
@@ -109,12 +109,6 @@ public class ApplicantData extends TestData {
     private static final String PARENTS_MARRIAGE_DATE_KEY = "parentsMarriageDate";
     private static final String PARENT_ONE_PASSPORT_NUMBER_KEY = "parentOnePassportNumber";
     private static final String PARENT_TWO_PASSPORT_NUMBER_KEY = "parentTwoPassportNumber";
-    public static final String PARENT_ONE_PASSPORT_ISSUE_DATE_DAY = "parentOnePassportIssueDateDay";
-    public static final String PARENT_ONE_PASSPORT_ISSUE_DATE_MONTH = "parentOnePassportIssueDateMonth";
-    public static final String PARENT_ONE_PASSPORT_ISSUE_DATE_YEAR = "parentOnePassportIssueDateYear";
-    public static final String PARENT_TWO_PASSPORT_ISSUE_DATE_DAY = "parentTwoPassportIssueDateDay";
-    public static final String PARENT_TWO_PASSPORT_ISSUE_DATE_MONTH = "parentTwoPassportIssueDateMonth";
-    public static final String PARENT_TWO_PASSPORT_ISSUE_DATE_YEAR = "parentTwoPassportIssueDateYear";
     private static final String PARENT_ONE_TOWN_OF_BIRTH = "parentOneTownOfBirth";
     private static final String PARENT_TWO_TOWN_OF_BIRTH = "parentTwoTownOfBirth";
     private static final String WHO_IS_THIS_PASSPORT_FOR = "whoIsThisPassportFor";
@@ -129,13 +123,6 @@ public class ApplicantData extends TestData {
     private static final String OTHER_OPTION = "Other";
     private static final String STANDARD_OPTION = "Standard";
     private static final String DOB_LOG_STRING = "Applicant Date of Birth: {}";
-    private static final String IS_DAP_EXAMINER_APPLICATION = "isDAPExaminerApplication";
-    private static final String EDIT_DOB_KEY = "editDOB";
-    private static final String EDIT_PARENTS_KEY = "editParents";
-    private static final String EDIT_GRANDPARENTS_KEY = "editGrandParents";
-    private static final String EDIT_COUNTRY_OF_APPLICATION_KEY = "editCountryOfApplication";
-    private static final String UPGRADE_REQUIREMENT_TYPE = "upgradeRequirementType";
-    private static final String UPGRADE_DECISION_KEY = "upgradeApproved";
 
     private final SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_STRING);
 
@@ -143,13 +130,8 @@ public class ApplicantData extends TestData {
     private final String countryCodeOfApplication;
     private final String dateOfBirth;
     private final String title;
-    private String gender;
-    private String firstNames;
     private final List<String> previousFirstNames;
     private final List<String> previousSurnames;
-    private Boolean hasNameChange;
-    private String nameChangeReason;
-    private String surname;
     private final String townOfBirth;
     private final String countryOfBirthCode;
     private final Boolean isOverseas;
@@ -160,27 +142,13 @@ public class ApplicantData extends TestData {
     private final String email;
     private final String housePhoneNumber;
     private final String mobilePhoneNumber;
-    private String existingPassportNumber;
     private final String existingPassportIssueDate;
     private final String existingPassportExpiryDate;
-    private String desiresBrailleSticker;
-    private String processingCentre;
-    private String desiredDeliveryType;
-    private String desiresEmailUpdates;
-    private String desiresTextUpdates;
     private final String issuingAuthority;
-    private Boolean canSignNewPassport;
-    private Boolean isPremium;
-    private Boolean isCompassionate;
     private final Boolean isPOL;
     private final Boolean isLostOrStolen;
-    private final String hasCancelledPassport;
     private final Boolean isFirstTimeApplication;
     private final Boolean hasNaturalisationCertificate;
-    private String parentOneFirstName;
-    private String parentOneLastName;
-    private String parentTwoFirstName;
-    private String parentTwoLastName;
     private final String parentOneBirthDate;
     private final String parentTwoBirthDate;
     private final String parentsMarried;
@@ -190,8 +158,6 @@ public class ApplicantData extends TestData {
     private final String parentOneCountryOfBirthCode;
     private final String parentTwoCountryOfBirthCode;
     private final String parentsMarriageDate;
-    private String parentOnePassportNumber;
-    private String parentTwoPassportNumber;
     private final String parentOnePassportIssueDateDay;
     private final String parentOnePassportIssueDateMonth;
     private final String parentOnePassportIssueDateYear;
@@ -231,17 +197,36 @@ public class ApplicantData extends TestData {
     private final String parentTwosParentTwoBirthDate;
     private final String parentTwosParentsMarried;
     private final String parentTwosParentsMarriageDate;
+    private final String certificateNumber;
+    public Integer previousNameCount;
+    public Boolean hasPreviousNames;
+    private String gender;
+    private String firstNames;
+    private Boolean hasNameChange;
+    private String nameChangeReason;
+    private String surname;
+    private String existingPassportNumber;
+    private String desiresBrailleSticker;
+    private String processingCentre;
+    private String desiredDeliveryType;
+    private String desiresEmailUpdates;
+    private String desiresTextUpdates;
+    private Boolean canSignNewPassport;
+    private Boolean isPremium;
+    private Boolean isCompassionate;
+    private String parentOneFirstName;
+    private String parentOneLastName;
+    private String parentTwoFirstName;
+    private String parentTwoLastName;
+    private String parentOnePassportNumber;
+    private String parentTwoPassportNumber;
     private String applicationLanguage;
     private String photoName;
-    private final String certificateNumber;
     private String naturalisationDate;
-
     // Derived data
     private Boolean isOverseasNonStandardCountryFlag;
     private Boolean isOverseasType7CountryFlag;
     private String photoType;
-    public Integer previousNameCount;
-    public Boolean hasPreviousNames;
 
 
     public ApplicantData(String scenarioName) throws Exception {
@@ -284,7 +269,6 @@ public class ApplicantData extends TestData {
         isPOL = checkRandomBoolean(POL_KEY);
         hasNameChange = checkRandomBoolean(NAME_CHANGE_KEY);
         isLostOrStolen = checkRandomBoolean(LOST_OR_STOLEN_KEY);
-        hasCancelledPassport = checkRandomString(HAS_CANCELLED_PASSPORT);
         isFirstTimeApplication = checkRandomBoolean(FIRST_TIME_APPLICANT_KEY);
         hasNaturalisationCertificate = checkRandomBoolean(HAS_NATURALISATION_CERTIFICATE_KEY);
         parentOneFirstName = checkRandomString(PARENT_ONE_FIRST_NAME_KEY);
@@ -351,6 +335,10 @@ public class ApplicantData extends TestData {
         parentTwoPassportNumber = checkRandomString(PARENT_TWO_PASSPORT_NUMBER_KEY);
         certificateNumber = checkRandomString(CERTIFICATE_NUMBER_KEY);
         naturalisationDate = checkRandomString(NATURALISATION_DATE_KEY);
+    }
+
+    public static Boolean isAValidApplicationForThisStep() {
+        return isNullOrEmpty(DataStore.getDataKey(DataStore.APPLICATION_NOT_ALLOWED));
     }
 
     @Override
@@ -792,12 +780,7 @@ public class ApplicantData extends TestData {
     }
 
     public String getMobilePhoneNumber() {
-        //TODO: Enable once POL mobile number issue PEXDDPS-2515 is fixed.
-        //if(isAPOLApplication() && !getDesiresTextUpdates())
-        //return null;
-        //else {
         return mobilePhoneNumber;
-        //}
     }
 
     public String getExistingPassportNumber() {
@@ -919,24 +902,6 @@ public class ApplicantData extends TestData {
         return applicantDateOfBirth.compareTo(minEUSSDateOfBirth) > 0;
     }
 
-    public String getParentOneBirthYear() {
-        if (isNullOrEmpty(parentOneBirthDate)) {
-            return "";
-        } else {
-            LocalDate dateOfBirth = LocalDate.parse(parentOneBirthDate);
-            return String.valueOf(dateOfBirth.getYear());
-        }
-    }
-
-    public String getParentTwoBirthYear() {
-        if (isNullOrEmpty(parentTwoBirthDate)) {
-            return "";
-        } else {
-            LocalDate dateOfBirth = LocalDate.parse(parentTwoBirthDate);
-            return String.valueOf(dateOfBirth.getYear());
-        }
-    }
-
     public Boolean isOverseas() {
         return isOverseas;
     }
@@ -958,13 +923,6 @@ public class ApplicantData extends TestData {
 
     public Boolean isPremium() {
         return isPremium;
-    }
-
-    public Boolean isCompassionate() {
-        if (isNull(isCompassionate)) {
-            isCompassionate = false;
-        }
-        return isCompassionate;
     }
 
     public Boolean isAHiddenFirstTimeApplicant() {
@@ -1009,10 +967,6 @@ public class ApplicantData extends TestData {
 
     public Boolean hasLostOrStolenPassport() {
         return isLostOrStolen;
-    }
-
-    public Boolean hasCancelledPassport() {
-        return !isNullOrEmpty(hasCancelledPassport) && "Yes".equalsIgnoreCase(hasCancelledPassport);
     }
 
     public Boolean isFirstTimeApplication() {
@@ -1290,9 +1244,11 @@ public class ApplicantData extends TestData {
     public String getParentOnesParentsMarriageDate() {
         return parentOnesParentsMarriageDate;
     }
+
     public String getParentTwosParentsMarriageDate() {
         return parentTwosParentsMarriageDate;
     }
+
     public String getParentOnesParentTwoBirthDate() {
         return parentOnesParentTwoBirthDate;
     }
@@ -1367,7 +1323,7 @@ public class ApplicantData extends TestData {
 
         if (DataStore.hasKey(DataStore.DAP_PHOTO_RESUB) && DataStore.getDataKey(DataStore.DAP_PHOTO_RESUB).equalsIgnoreCase("true")) {
             photoNameToUse = chooseRandomPhoto();
-            log.info("getting photo type for photo resub [{}]",photoNameToUse);
+            log.info("getting photo type for photo resub [{}]", photoNameToUse);
         }
         switch (photoNameToUse) {
             //Photo Code Photos
@@ -1462,7 +1418,7 @@ public class ApplicantData extends TestData {
             photoType = getPhotoType();
 
         }
-        log.info("Photo name and type [{}] [{}]",photoName, photoType );
+        log.info("Photo name and type [{}] [{}]", photoName, photoType);
         DataStore.setDataKey(DataStore.STORED_PHOTO_NAME, photoName);
         return photoName;
     }
@@ -1471,7 +1427,7 @@ public class ApplicantData extends TestData {
         if (DataStore.hasKey(DataStore.DAP_PHOTO_RESUB) && DataStore.getDataKey(DataStore.DAP_PHOTO_RESUB).equalsIgnoreCase("true")) {
             return chooseRandomPhoto();
         } else {
-            DataStore.setDataKey(DataStore.STORED_PHOTO_NAME,photoName);
+            DataStore.setDataKey(DataStore.STORED_PHOTO_NAME, photoName);
             return photoName;
         }
     }
@@ -1515,10 +1471,6 @@ public class ApplicantData extends TestData {
 
     public Boolean isLessThanYearsOld(int yearsOld) {
         return isLessThanYearsOldOnDate(yearsOld, LocalDate.now());
-    }
-
-    public static Boolean isAValidApplicationForThisStep() {
-        return isNullOrEmpty(DataStore.getDataKey(DataStore.APPLICATION_NOT_ALLOWED));
     }
 
     private String getRandomNaturalisationDate() {

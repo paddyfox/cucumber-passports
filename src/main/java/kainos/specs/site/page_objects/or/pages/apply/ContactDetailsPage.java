@@ -9,11 +9,16 @@ public class ContactDetailsPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Contact details";
     private static final String PAGE_HEADER_WELSH = "Manylion cyswllt";
 
-    @FindBy(tagName = "h1") private WebElement contactDetailsPageHeader;
-    @FindBy(id = "contactEmail") private WebElement contactEmailField;
-    @FindBy(id = "contactEmailConfirm") private WebElement contactEmailConfirmField;
-    @FindBy(id = "contactPhone") private WebElement contactPhoneField;
-    @FindBy(id = "dialling-code-contact") private WebElement contactDiallingCodeField;
+    @FindBy(tagName = "h1")
+    private WebElement contactDetailsPageHeader;
+    @FindBy(id = "contactEmail")
+    private WebElement contactEmailField;
+    @FindBy(id = "contactEmailConfirm")
+    private WebElement contactEmailConfirmField;
+    @FindBy(id = "contactPhone")
+    private WebElement contactPhoneField;
+    @FindBy(id = "dialling-code-contact")
+    private WebElement contactDiallingCodeField;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, contactDetailsPageHeader);

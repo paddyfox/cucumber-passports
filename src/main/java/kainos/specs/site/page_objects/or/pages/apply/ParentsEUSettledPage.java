@@ -1,9 +1,9 @@
 package kainos.specs.site.page_objects.or.pages.apply;
 
+import kainos.specs.datastore.DataStore;
 import kainos.specs.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import kainos.specs.datastore.DataStore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +20,14 @@ public class ParentsEUSettledPage extends Site {
     private static final String I_DONT_KNOW_ENGLISH = "I don’t know";
     private static final String I_DONT_KNOW_WELSH = "Dwi ddim yn gwybod";
 
-    @FindBy(tagName = "h1") private WebElement parentsEUSettledPageHeader;
-    @FindBy(id = "parents-have-eu-settled-status-true-label") private WebElement yesButton;
-    @FindBy(id = "parents-have-eu-settled-status-false-label") private WebElement noButton;
-    @FindBy(id = "parents-have-eu-settled-status-unknown-label") private WebElement iDontKnowButton;
+    @FindBy(tagName = "h1")
+    private WebElement parentsEUSettledPageHeader;
+    @FindBy(id = "parents-have-eu-settled-status-true-label")
+    private WebElement yesButton;
+    @FindBy(id = "parents-have-eu-settled-status-false-label")
+    private WebElement noButton;
+    @FindBy(id = "parents-have-eu-settled-status-unknown-label")
+    private WebElement iDontKnowButton;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, parentsEUSettledPageHeader);

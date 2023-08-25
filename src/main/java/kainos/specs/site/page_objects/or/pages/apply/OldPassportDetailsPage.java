@@ -14,15 +14,24 @@ public class OldPassportDetailsPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Old passport details";
     private static final String PAGE_HEADER_WELSH = "Manylion hen basbort";
 
-    @FindBy(tagName = "h1") private WebElement oldPassportDetailsPageHeader;
-    @FindBy(id = "passport-number") private WebElement oldPassportNumberField;
-    @FindBy(id = "old-passport-number") private WebElement oldBluePassportNumberField;
-    @FindBy(id = "passport-expiry-day") private WebElement oldPassportExpiryDayField;
-    @FindBy(id = "passport-expiry-month") private WebElement oldPassportExpiryMonthField;
-    @FindBy(id = "passport-expiry-year") private WebElement oldPassportExpiryYearField;
-    @FindBy(id = "old-passport-expiry-day") private WebElement oldBluePassportExpiryDayField;
-    @FindBy(id = "old-passport-expiry-month") private WebElement oldBluePassportExpiryMonthField;
-    @FindBy(id = "old-passport-expiry-year") private WebElement oldBluePassportExpiryYearField;
+    @FindBy(tagName = "h1")
+    private WebElement oldPassportDetailsPageHeader;
+    @FindBy(id = "passport-number")
+    private WebElement oldPassportNumberField;
+    @FindBy(id = "old-passport-number")
+    private WebElement oldBluePassportNumberField;
+    @FindBy(id = "passport-expiry-day")
+    private WebElement oldPassportExpiryDayField;
+    @FindBy(id = "passport-expiry-month")
+    private WebElement oldPassportExpiryMonthField;
+    @FindBy(id = "passport-expiry-year")
+    private WebElement oldPassportExpiryYearField;
+    @FindBy(id = "old-passport-expiry-day")
+    private WebElement oldBluePassportExpiryDayField;
+    @FindBy(id = "old-passport-expiry-month")
+    private WebElement oldBluePassportExpiryMonthField;
+    @FindBy(id = "old-passport-expiry-year")
+    private WebElement oldBluePassportExpiryYearField;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, oldPassportDetailsPageHeader);

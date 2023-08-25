@@ -1,4 +1,4 @@
-package step_definitions.specifications;
+package step_definitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -6,20 +6,23 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import kainos.specs.driver.DriverManager;
+import kainos.specs.helpers.ApplicantData;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import step_definitions.specifications.helpers.SpecificationsStepsHelpers;
-import step_definitions.specifications.steps.*;
-import kainos.specs.driver.DriverManager;
-import kainos.specs.helpers.ApplicantData;
+import step_definitions.helpers.SpecificationsStepsHelpers;
+import step_definitions.steps.SpecificationsStepsApply;
+import step_definitions.steps.SpecificationsStepsFilter;
+import step_definitions.steps.SpecificationsStepsPhoto;
+import step_definitions.helpers.TestEnvironmentHelpers;
 
 import java.util.UUID;
 
 @Slf4j
 public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
 
-    private final TestEnvironmentSteps testEnvironment = new TestEnvironmentSteps();
+    private final TestEnvironmentHelpers testEnvironment = new TestEnvironmentHelpers();
     private final SpecificationsStepsFilter theApplicantFilter = new SpecificationsStepsFilter();
     private final SpecificationsStepsApply theApplicantApply = new SpecificationsStepsApply();
     private final SpecificationsStepsPhoto theApplicantPhoto = new SpecificationsStepsPhoto();

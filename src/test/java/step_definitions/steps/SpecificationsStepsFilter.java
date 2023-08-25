@@ -1,14 +1,14 @@
-package step_definitions.specifications.steps;
+package step_definitions.steps;
 
+import kainos.specs.datastore.DataStore;
+import kainos.specs.helpers.ApplicantData;
+import kainos.specs.site.page_objects.or.pages.StartPage;
 import kainos.specs.site.page_objects.or.pages.filter.*;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import step_definitions.specifications.helpers.SpecificationsStepsHelpers;
-import kainos.specs.datastore.DataStore;
-import kainos.specs.helpers.ApplicantData;
-import kainos.specs.site.page_objects.or.pages.StartPage;
+import step_definitions.helpers.SpecificationsStepsHelpers;
 
 import static kainos.specs.datastore.DataStore.APPLICATION_NOT_ALLOWED;
 import static kainos.specs.helpers.ApplicantData.isAValidApplicationForThisStep;

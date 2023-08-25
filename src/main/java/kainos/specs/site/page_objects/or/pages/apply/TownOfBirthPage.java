@@ -8,8 +8,10 @@ public class TownOfBirthPage extends Site {
 
     private static final String PAGE_HEADER = "Town of birth";
 
-    @FindBy(tagName = "h1") private WebElement townOfBirthPageHeader;
-    @FindBy(id = "town-of-birth") private WebElement townOfBirthField;
+    @FindBy(tagName = "h1")
+    private WebElement townOfBirthPageHeader;
+    @FindBy(id = "town-of-birth")
+    private WebElement townOfBirthField;
 
     public void verifyPageHeader() throws Exception {
         verifyPageHeader(PAGE_HEADER, townOfBirthPageHeader);

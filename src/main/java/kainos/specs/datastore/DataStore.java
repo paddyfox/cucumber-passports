@@ -48,12 +48,10 @@ public class DataStore {
     public static final String NATURALISATION_CERTIFICATE_NUMBER = "naturalisationCertificateNumber";
     public static final String NATURALISATION_CERTIFICATE_ISSUE_DATE = "naturalisationCertificateIssueDate";
     public static final String IS_DAP_APPLICATION = "isDAPApplication";
-    public static final String IS_DAP_EXAMINER_APPLICATION = "isDAPExaminerApplication";
     public static final String PHOTO_TYPE = "photoType";
     public static final String APPLICATION_LANGUAGE = "applicationLanguage";
     public static final String APPLICATION_NOT_ALLOWED = "applicationNotAllowed";
     public static final String DELIVERY_OPTION = "deliveryOption";
-    public static final String BOOKING_FAILURE = "bookingFailure";
 
     public static final String PARENT_ONE_COUNTRY_OF_BIRTH_CODE = "parentOneCountryOfBirthCode";
     public static final String PARENT_ONE_TOWN_OF_BIRTH = "parentOneTownOfBirth";
@@ -92,7 +90,6 @@ public class DataStore {
     public static final String APPLICANT_ADDRESS_STATEORPROVINCE = "stateOrProvince";
     public static final String HAS_CHANGED_NAME_BEFORE_EDIT = "hasChangedNameBeforeEdit";
     public static final String PREVIOUS_NAME_ENTERED = "previousNameEntered";
-    public static final String NO_CHANGE = "noChange";
     public static final String ELIGIBLE_TO_PROVIDE_GRANDPARENTS_DETAILS = "eligibleToProvideGrandParentsDetails";
     public static final String YES_TO_EUSS = "selectedYesToEUSS";
 

@@ -1,11 +1,11 @@
 package kainos.specs.helpers;
 
 import kainos.specs.countrystore.CountryStore;
+import kainos.specs.datastore.DataStore;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import kainos.specs.datastore.DataStore;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -62,8 +62,15 @@ public abstract class TestData {
         this.data = getData(String.valueOf(path));
     }
 
+    public static String getRandomString(int maxNameLength) {
+        RandomString randomString = new RandomString(maxNameLength);
+
+        return randomString.nextString();
+    }
+
     /**
      * Read test data from json file and parse it.
+     *
      * @param pathToData path to test data directory for this data type
      * @return parsed json object
      * @throws IOException Failure to read or parse JSON file
@@ -77,15 +84,11 @@ public abstract class TestData {
         return data;
     }
 
-    public static String getRandomString(int maxNameLength) {
-        RandomString randomString = new RandomString(maxNameLength);
-
-        return randomString.nextString();
-    }
-
     protected abstract String checkRandomString(String key) throws Exception;
 
-    protected Boolean checkRandomBoolean(String key) { return this.data.has(key) ? this.data.getBoolean(key) : null; }
+    protected Boolean checkRandomBoolean(String key) {
+        return this.data.has(key) ? this.data.getBoolean(key) : null;
+    }
 
     protected String getString(String key) {
         return this.data.has(key) ? this.data.getString(key) : null;
@@ -141,6 +144,7 @@ public abstract class TestData {
 
         return randomCountryCode;
     }
+
     protected String getRandomType7CountryCode() {
         List<String> countryList = new ArrayList<>(CountryStore.contentType7countryHashMap.keySet());
 
@@ -159,13 +163,13 @@ public abstract class TestData {
     protected String getOverseasHousePhoneNumber() {
         Object phoneNumber = CountryStore.countryHashMap.get(DataStore.getDataKey(DataStore.APPLICANT_COUNTRY_CODE)).get(1);
 
-        return String.valueOf(phoneNumber).replaceAll("\\-","" ).replaceAll(" ","");
+        return String.valueOf(phoneNumber).replaceAll("\\-", "").replaceAll(" ", "");
     }
 
     protected String getOverseasMobilePhoneNumber() {
         Object phoneNumber = CountryStore.countryHashMap.get(DataStore.getDataKey(DataStore.APPLICANT_COUNTRY_CODE)).get(2);
 
-        return String.valueOf(phoneNumber).replaceAll("\\-","" ).replaceAll(" ","");
+        return String.valueOf(phoneNumber).replaceAll("\\-", "").replaceAll(" ", "");
     }
 
     protected String getOverseasAddressPostcode() {

@@ -1,14 +1,14 @@
 package kainos.specs.driver.producer.desktop.ie;
 
+import kainos.specs.driver.GridUtils;
+import kainos.specs.driver.producer.WebDriverProducer;
+import kainos.specs.properties.CommonProperties;
+import kainos.specs.properties.PropertyLoader;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import kainos.specs.driver.GridUtils;
-import kainos.specs.driver.producer.WebDriverProducer;
-import kainos.specs.properties.CommonProperties;
-import kainos.specs.properties.PropertyLoader;
 
 import java.util.HashMap;
 

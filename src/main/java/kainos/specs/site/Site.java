@@ -27,6 +27,87 @@ public class Site {
         return getDriver().getCurrentUrl();
     }
 
+    public static WebDriverWait webDriverWait(long milliseconds) {
+        return new WebDriverWait(getDriver(), Duration.ofMillis(milliseconds));
+    }
+
+    public static boolean elementIsDisplayed(WebElement element) {
+        int tries = 10;
+        for (int i = 1; i <= tries; i++) {
+            try {
+                return element.isDisplayed();
+            } catch (NoSuchElementException e) {
+                return false;
+            } catch (StaleElementReferenceException | JsonException e) {
+                log.info("Retry {} out of {} to check if WebElement {} is displayed", i, tries, element);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex) {
+                    e.printStackTrace();
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        throw new RuntimeException("ERROR: Could not determine if WebElement is displayed: " + element);
+    }
+
+    private static void waitForElementToBeDisplayed(WebElement element) {
+        int tries = 10;
+        for (int i = 1; i <= tries; i++) {
+            if (elementIsDisplayed(element)) {
+                log.debug("WebElement displayed {}", element);
+                return;
+            }
+
+            try {
+                log.info("Retry {} out of {} for WebElement {} to be displayed", i, tries, element);
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            }
+        }
+
+        throw new NoSuchElementException("ERROR: Cannot find WebElement: " + element);
+    }
+
+    public static void waitForElementToContainText(WebElement element, String expectedText) {
+        waitForElementToBeDisplayed(element);
+
+        String actualText = null;
+        int tries = 10;
+        for (int i = 0; i < tries; i++) {
+            actualText = element.getText();
+            if (actualText.contains(expectedText)) {
+                log.debug("WebElement {} contained text: {} (expected {})", element, actualText, expectedText);
+                return;
+            }
+
+            try {
+                log.info("WebElement {} did not contain expected text: {}, got: {}", element, expectedText, actualText);
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            }
+        }
+
+        throw new NotFoundException("ERROR: WebElement " + element + " did not contain expected text: " + expectedText + ", got: " + actualText);
+    }
+
+    public static void goToUrl(String webAddress) {
+        getDriver().get(webAddress);
+    }
+
+    public static WebElement findElement(By by) {
+        return getDriver().findElement(by);
+    }
+
+    public static void closeWindow() {
+        getDriver().close();
+    }
+
     public void removeCookies() {
         getDriver().manage().deleteAllCookies();
         assertThat(getDriver().manage().getCookies(), empty());
@@ -119,86 +200,5 @@ public class Site {
         } else {
             return CountryStore.countryHashMap.get(countryCode).get(4);
         }
-    }
-
-    public static WebDriverWait webDriverWait(long milliseconds) {
-        return new WebDriverWait(getDriver(), Duration.ofMillis(milliseconds));
-    }
-
-    public static boolean elementIsDisplayed(WebElement element) {
-        int tries = 10;
-        for (int i = 1; i <= tries; i++) {
-            try {
-                return element.isDisplayed();
-            } catch (NoSuchElementException e) {
-                return false;
-            } catch (StaleElementReferenceException | JsonException e) {
-                log.info("Retry {} out of {} to check if WebElement {} is displayed", i, tries, element);
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                    e.printStackTrace();
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-
-        throw new RuntimeException("ERROR: Could not determine if WebElement is displayed: " + element);
-    }
-
-    private static void waitForElementToBeDisplayed(WebElement element) {
-        int tries = 10;
-        for (int i = 1; i <= tries; i++) {
-            if (elementIsDisplayed(element)) {
-                log.debug("WebElement displayed {}", element);
-                return;
-            }
-
-            try {
-                log.info("Retry {} out of {} for WebElement {} to be displayed", i, tries, element);
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
-            }
-        }
-
-        throw new NoSuchElementException("ERROR: Cannot find WebElement: " + element);
-    }
-
-    public static void waitForElementToContainText(WebElement element, String expectedText) {
-        waitForElementToBeDisplayed(element);
-
-        String actualText = null;
-        int tries = 10;
-        for (int i = 0; i < tries; i++) {
-            actualText = element.getText();
-            if (actualText.contains(expectedText)) {
-                log.debug("WebElement {} contained text: {} (expected {})", element, actualText, expectedText);
-                return;
-            }
-
-            try {
-                log.info("WebElement {} did not contain expected text: {}, got: {}", element, expectedText, actualText);
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
-            }
-        }
-
-        throw new NotFoundException("ERROR: WebElement " + element + " did not contain expected text: " + expectedText + ", got: " + actualText);
-    }
-
-    public static void goToUrl(String webAddress) {
-        getDriver().get(webAddress);
-    }
-
-    public static WebElement findElement(By by) {
-        return getDriver().findElement(by);
-    }
-
-    public static void closeWindow() {
-        getDriver().close();
     }
 }

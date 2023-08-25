@@ -1,186 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-13T14:28:10 BST" name="Smoke Test Suite" finished-at="2023-06-13T14:29:55 BST" duration-ms="105251">
+  <suite started-at="2023-08-25T12:15:27 BST" name="Smoke Test Suite" finished-at="2023-08-25T12:15:55 BST" duration-ms="27649">
     <groups>
       <group name="cucumber serial">
-        <method signature="BaseRunner.runSerialScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" name="runSerialScenario" class="runners.BaseRunner"/>
+        <method signature="BaseRunner.runSerialScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@7f132176]" name="runSerialScenario" class="runners.BaseRunner"/>
       </group> <!-- cucumber serial -->
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@7f132176]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
       <group name="cucumber parallel">
-        <method signature="BaseRunner.runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" name="runParallelScenario" class="runners.BaseRunner"/>
+        <method signature="BaseRunner.runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@7f132176]" name="runParallelScenario" class="runners.BaseRunner"/>
       </group> <!-- cucumber parallel -->
     </groups>
-    <test started-at="2023-06-13T14:28:10 BST" name="Smoke Tests" finished-at="2023-06-13T14:29:55 BST" duration-ms="105251">
+    <test started-at="2023-08-25T12:15:27 BST" name="Smoke Tests" finished-at="2023-08-25T12:15:55 BST" duration-ms="27649">
       <class name="runners.RunSmokeTest">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:09 BST" name="setUpClass" finished-at="2023-06-13T14:28:10 BST" duration-ms="683" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runners.RunSmokeTest@7f132176]" started-at="2023-08-25T12:15:26 BST" name="setUpClass" finished-at="2023-08-25T12:15:27 BST" duration-ms="702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:48 BST" duration-ms="98177" status="PASS">
+        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@7f132176]" started-at="2023-08-25T12:15:27 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-08-25T12:15:55 BST" duration-ms="27581" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey10"]]>
+                <![CDATA["Simple happy path for adult UK applications to apply for a first time passport"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
+                <![CDATA["Optional[Apply for a First time UK Passport]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:39 BST" duration-ms="89380" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey9"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:52 BST" duration-ms="101865" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey3"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:33 BST" duration-ms="83294" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey4"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:31 BST" duration-ms="80756" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey8"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:34 BST" duration-ms="83810" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey2"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:31 BST" duration-ms="80866" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey6"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:55 BST" duration-ms="105188" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey5"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:54 BST" duration-ms="104064" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey7"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method signature="runParallelScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:28:10 BST" name="runParallelScenario" description="Runs Parallel enabled Scenarios" data-provider="parallelScenarios" finished-at="2023-06-13T14:29:35 BST" duration-ms="84975" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Simple happy path for adult applications to apply for a first time passport with a paper referee Exception journey1"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Customer Journey Transformation Smoke Tests]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runParallelScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.RunSmokeTest@388526fb]" started-at="2023-06-13T14:29:55 BST" name="tearDownClass" finished-at="2023-06-13T14:29:55 BST" duration-ms="26" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.RunSmokeTest@7f132176]" started-at="2023-08-25T12:15:55 BST" name="tearDownClass" finished-at="2023-08-25T12:15:55 BST" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

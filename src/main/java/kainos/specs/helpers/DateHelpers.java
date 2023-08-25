@@ -63,6 +63,7 @@ public class DateHelpers {
 
         return nowPlus21Days.toString();
     }
+
     public static String getFifteenYearsEightAgeDateOfBirth(int years) {
         LocalDate nowPlus21Days = LocalDate.now().plus(3, ChronoUnit.MONTHS).minusYears(years);
 
@@ -95,7 +96,7 @@ public class DateHelpers {
     }
 
     public static String getPassportExpiryDate3MonthsFromNow() {
-        String expiryDate =  LocalDate.now().plusMonths(3).format(DATE_FORMATTER);
+        String expiryDate = LocalDate.now().plusMonths(3).format(DATE_FORMATTER);
         log.info("Passport Expiry Date: [{}]", expiryDate);
 
         return expiryDate;

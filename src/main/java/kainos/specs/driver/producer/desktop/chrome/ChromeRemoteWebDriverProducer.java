@@ -19,11 +19,10 @@ public class ChromeRemoteWebDriverProducer extends BaseRemoteDriver implements W
     public WebDriver produce() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("acceptInsecureCerts", true);
-        chromeOptions.setCapability("acceptSslCerts", true);
-        chromeOptions.setCapability("env", new String[]{"LANG=en_GB.UTF-8", "LANGUAGE=en_GB:en", "LC_ALL=en_GB.UTF-8"});
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--safebrowsing-disable-download-protection");
+        chromeOptions.addArguments("--disable-site-isolation-trials");
 
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("safebrowsing.enabled", "true");

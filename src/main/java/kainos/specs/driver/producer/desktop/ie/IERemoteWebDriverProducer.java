@@ -1,13 +1,13 @@
 package kainos.specs.driver.producer.desktop.ie;
 
+import kainos.specs.driver.GridUtils;
 import kainos.specs.driver.producer.BaseRemoteDriver;
+import kainos.specs.driver.producer.WebDriverProducer;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import kainos.specs.driver.GridUtils;
-import kainos.specs.driver.producer.WebDriverProducer;
 
 public class IERemoteWebDriverProducer extends BaseRemoteDriver implements WebDriverProducer {
 

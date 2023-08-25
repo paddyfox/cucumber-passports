@@ -9,10 +9,12 @@ public class DocumentsPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "What you need to send";
     private static final String PAGE_HEADER_WELSH = "Yr hyn sydd angen i chi anfon";
 
-    @FindBy(tagName = "h1") private WebElement documentsToSendPageHeader;
-    @FindBy(css = "#parents-docs > ul > li") private WebElement parentsDocumentsSection;
-    @FindBy(id = "documents-to-send-true-label") private WebElement docsToSendYesRadio;
-    @FindBy(id = "documents-to-send-false-label") private WebElement docsToSendNoRadio;
+    @FindBy(tagName = "h1")
+    private WebElement documentsToSendPageHeader;
+    @FindBy(id = "documents-to-send-true-label")
+    private WebElement docsToSendYesRadio;
+    @FindBy(id = "documents-to-send-false-label")
+    private WebElement docsToSendNoRadio;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, documentsToSendPageHeader);
@@ -24,9 +26,5 @@ public class DocumentsPage extends Site {
 
     public void selectDocumentsToSendNoRadio() {
         clickOnElement(docsToSendNoRadio);
-    }
-
-    public String getDetailsFromParentsDocuments() {
-        return (parentsDocumentsSection).getText();
     }
 }

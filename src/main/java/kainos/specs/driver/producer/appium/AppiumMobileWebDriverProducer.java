@@ -2,14 +2,14 @@ package kainos.specs.driver.producer.appium;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import kainos.specs.driver.producer.BaseRemoteDriver;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.LocalFileDetector;
 import kainos.specs.driver.GridUtils;
+import kainos.specs.driver.producer.BaseRemoteDriver;
 import kainos.specs.driver.producer.WebDriverProducer;
 import kainos.specs.properties.AppiumMobileProperties;
 import kainos.specs.properties.PropertyLoader;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.LocalFileDetector;
 
 import java.util.HashMap;
 

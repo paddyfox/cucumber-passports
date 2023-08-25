@@ -1,10 +1,10 @@
 package kainos.specs.driver.producer.desktop.edge;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import kainos.specs.driver.producer.BaseLocalDriver;
 import kainos.specs.driver.producer.WebDriverProducer;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class EdgeLocalWebDriverProducer extends BaseLocalDriver implements WebDriverProducer {
 

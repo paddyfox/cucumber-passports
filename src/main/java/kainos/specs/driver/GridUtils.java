@@ -12,7 +12,7 @@ import static java.util.Objects.isNull;
 public class GridUtils {
 
     public static URL getSeleniumGridURL() {
-            return getBrowserstackGridURL("username", "password");
+        return getBrowserstackGridURL("username", "password");
     }
 
     public static URL getBrowserstackGridURL(String username, String accessKey) {

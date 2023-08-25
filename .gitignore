@@ -1,0 +1,13 @@
+DS_Store
+/src/.DS_Store
+/src/test/.DS_Store
+/src/test/resources/.DS_Store
+/src/test/resources/test_data/.DS_Store
+.idea*
+.settings
+target*
+*.iml
+.classpath
+.project
+/src/test/resources/data/*
+/src/test/java/reports/*

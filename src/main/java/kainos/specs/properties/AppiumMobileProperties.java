@@ -7,5 +7,4 @@ public class AppiumMobileProperties {
     public final static String PLATFORM_NAME = "appium.platform.name";
     public final static String OS_VERSION = "appium.os.version";
     public final static String APPIUM_VERSION = "appium.version";
-
 }

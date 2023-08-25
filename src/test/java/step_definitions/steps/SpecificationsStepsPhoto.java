@@ -1,5 +1,7 @@
-package step_definitions.specifications.steps;
+package step_definitions.steps;
 
+import kainos.specs.datastore.DataStore;
+import kainos.specs.helpers.ApplicantData;
 import kainos.specs.site.page_objects.or.pages.photo.*;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -7,9 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import step_definitions.specifications.helpers.SpecificationsStepsHelpers;
-import kainos.specs.datastore.DataStore;
-import kainos.specs.helpers.ApplicantData;
+import step_definitions.helpers.SpecificationsStepsHelpers;
 
 import static kainos.specs.datastore.DataStore.*;
 import static org.testng.Assert.assertEquals;
@@ -33,8 +33,8 @@ public class SpecificationsStepsPhoto extends SpecificationsStepsHelpers {
     }
 
     private void confirmsUploadedPhoto() throws Exception {
-                    waitForPhotoUploadRetrieve();
-                    verifyPhotoResult();
+        waitForPhotoUploadRetrieve();
+        verifyPhotoResult();
     }
 
     private void verifyPhotoResult() throws Exception {
@@ -71,9 +71,9 @@ public class SpecificationsStepsPhoto extends SpecificationsStepsHelpers {
 
     private void verifyCorrectPhotoGuidance() {
         if (applicant.isRising16() || !applicant.isChild()) {
-                assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for adults");
+            assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for adults");
         } else {
-                assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for babies and children");
+            assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for babies and children");
         }
     }
 

@@ -1,14 +1,13 @@
 package kainos.specs.site.page_objects.or.pages.filter;
 
+import kainos.specs.countrystore.CountryStore;
+import kainos.specs.datastore.DataStore;
+import kainos.specs.helpers.CountryHelpers;
 import kainos.specs.site.Site;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import kainos.specs.countrystore.CountryStore;
-import kainos.specs.datastore.DataStore;
-import kainos.specs.helpers.CountryHelpers;
-
 
 public class OverseasCountryOfBirthPage extends Site {
 
@@ -16,8 +15,10 @@ public class OverseasCountryOfBirthPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Which country were you born in?";
     private static final String PAGE_HEADER_WELSH = "Ym mha wlad y cawsoch eich geni?";
 
-    @FindBy(tagName = "h1") private WebElement pageHeader;
-    @FindBy(id = "country-of-birth") private WebElement countryOfBirthDropdown;
+    @FindBy(tagName = "h1")
+    private WebElement pageHeader;
+    @FindBy(id = "country-of-birth")
+    private WebElement countryOfBirthDropdown;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, pageHeader);

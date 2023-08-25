@@ -1,12 +1,12 @@
 package runners;
 
 import io.cucumber.testng.*;
+import kainos.specs.driver.DriverManager;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import kainos.specs.driver.DriverManager;
 
 import java.util.Arrays;
 import java.util.function.Predicate;

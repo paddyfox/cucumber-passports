@@ -1,11 +1,11 @@
 package kainos.specs.driver.producer.desktop.ie;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import kainos.specs.driver.producer.BaseLocalDriver;
+import kainos.specs.driver.producer.WebDriverProducer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
-import kainos.specs.driver.producer.BaseLocalDriver;
-import kainos.specs.driver.producer.WebDriverProducer;
 
 public class IELocalWebDriverProducer extends BaseLocalDriver implements WebDriverProducer {
 

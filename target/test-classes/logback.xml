@@ -9,7 +9,7 @@
 
     <!-- log warnings and errors by default -->
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDOUT"/>
     </root>
 
 </configuration>

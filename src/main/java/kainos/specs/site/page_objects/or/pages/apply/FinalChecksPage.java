@@ -11,7 +11,8 @@ public class FinalChecksPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "Check this application";
     private static final String PAGE_HEADER_WELSH = "Gwirio’r cais hwn";
 
-    @FindBy(tagName = "h1") private WebElement pageHeader;
+    @FindBy(tagName = "h1")
+    private WebElement pageHeader;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, pageHeader);

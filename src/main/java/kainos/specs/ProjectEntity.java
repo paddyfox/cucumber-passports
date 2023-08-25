@@ -9,6 +9,5 @@ public class ProjectEntity {
 
     public static String getProjectName = nonNull(PropertyLoader.getProperty(CommonProperties.PROJECT_NAME)) ?
             PropertyLoader.getProperty(CommonProperties.PROJECT_NAME) :
-            "Automated Accessibility Tests";
-
+            "Automated Passport Tests";
 }

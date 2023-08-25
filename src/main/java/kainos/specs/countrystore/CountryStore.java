@@ -11,6 +11,9 @@ import java.util.Map;
 @UtilityClass
 public class CountryStore {
     public static final Map<String, List<String>> countryHashMap = new HashMap<>();
+    public static final Map<String, String> contentType7countryHashMap = new HashMap<>();
+    public static final Map<String, String> ovsPaperChannelCountryHashMap = new HashMap<>();
+    public static final Map<String, List<String>> ovsDAPThreatLevelCountryHashMap = new HashMap<>();
 
     static {
         //France
@@ -18,8 +21,6 @@ public class CountryStore {
         //Germany
         countryHashMap.put("DE", Lists.newArrayList("+49", "895999250", "15123456789", "80336", "Germany", "1", "Yr Almaen"));
     }
-
-    public static final Map<String, String> contentType7countryHashMap = new HashMap<>();
 
     static {
         //Yemen
@@ -37,8 +38,6 @@ public class CountryStore {
         //British Indian Ocean Territory
         contentType7countryHashMap.put("IO", "British Indian Ocean Territory");
     }
-
-    public static final Map<String, String> ovsPaperChannelCountryHashMap = new HashMap<>();
 
     static {
         //Group1 Countries - Paper Channel
@@ -173,8 +172,6 @@ public class CountryStore {
         //Zimbabwe
         ovsPaperChannelCountryHashMap.put("ZW", "Zimbabwe");
     }
-
-    public static final Map<String, List<String>> ovsDAPThreatLevelCountryHashMap = new HashMap<>();
 
     static {
         //Threat level STANDARD countries

@@ -1,9 +1,9 @@
 package kainos.specs.site.page_objects.or.pages.apply;
 
+import kainos.specs.datastore.DataStore;
 import kainos.specs.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import kainos.specs.datastore.DataStore;
 
 import static kainos.specs.site.page_objects.or.constants.StepDefinitionAssertionConstants.RELATION_TO_APPLICANT_MAX_VLAUE;
 import static kainos.specs.site.page_objects.or.constants.StepDefinitionAssertionConstants.THIRD_PARTY_EXPLANATION;
@@ -13,20 +13,34 @@ public class WhatIsYourRelationToApplicantPage extends Site {
     private static final String PAGE_HEADER_ENGLISH = "What is your relationship to the applicant?";
     private static final String PAGE_HEADER_WELSH = "Beth yw eich perthynas i’r ymgeisydd?";
 
-    @FindBy(tagName = "h1") private WebElement pageHeader;
-    @FindBy(id = "relationship-mother-label") private WebElement motherButton;
-    @FindBy(id = "relationship-father-label") private WebElement fatherButton;
-    @FindBy(id = "relationship-other-label") private WebElement otherButton;
-    @FindBy(id = "otherRelationship") private WebElement otherRelationField;
-    @FindBy(id = "thirdPartyFirstName") private WebElement motherFirstName;
-    @FindBy(id = "thirdPartyLastName") private WebElement motherLastName;
-    @FindBy(id = "thirdPartyExplanation") private WebElement motherExplanation;
-    @FindBy(id = "thirdPartyFirstName") private WebElement fatherFirstName;
-    @FindBy(id = "thirdPartyLastName") private WebElement fatherLastName;
-    @FindBy(id = "thirdPartyExplanation") private WebElement fatherExplanation;
-    @FindBy(id = "otherFirstName") private WebElement otherFirstName;
-    @FindBy(id = "otherLastName") private WebElement otherLastName;
-    @FindBy(id = "otherWhy") private WebElement otherExplanation;
+    @FindBy(tagName = "h1")
+    private WebElement pageHeader;
+    @FindBy(id = "relationship-mother-label")
+    private WebElement motherButton;
+    @FindBy(id = "relationship-father-label")
+    private WebElement fatherButton;
+    @FindBy(id = "relationship-other-label")
+    private WebElement otherButton;
+    @FindBy(id = "otherRelationship")
+    private WebElement otherRelationField;
+    @FindBy(id = "thirdPartyFirstName")
+    private WebElement motherFirstName;
+    @FindBy(id = "thirdPartyLastName")
+    private WebElement motherLastName;
+    @FindBy(id = "thirdPartyExplanation")
+    private WebElement motherExplanation;
+    @FindBy(id = "thirdPartyFirstName")
+    private WebElement fatherFirstName;
+    @FindBy(id = "thirdPartyLastName")
+    private WebElement fatherLastName;
+    @FindBy(id = "thirdPartyExplanation")
+    private WebElement fatherExplanation;
+    @FindBy(id = "otherFirstName")
+    private WebElement otherFirstName;
+    @FindBy(id = "otherLastName")
+    private WebElement otherLastName;
+    @FindBy(id = "otherWhy")
+    private WebElement otherExplanation;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, pageHeader);

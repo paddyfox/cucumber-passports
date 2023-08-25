@@ -1,25 +1,30 @@
 package kainos.specs.site.page_objects.or.pages.filter;
 
+import kainos.specs.countrystore.CountryStore;
+import kainos.specs.datastore.DataStore;
 import kainos.specs.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import kainos.specs.countrystore.CountryStore;
-import kainos.specs.datastore.DataStore;
 
-import static org.openqa.selenium.By.id;
 import static kainos.specs.helpers.CountryHelpers.selectRandomCountryOfBirth;
+import static org.openqa.selenium.By.id;
 
 public class BirthPage extends Site {
 
     private static final String PAGE_HEADER_ENGLISH = "Were you born in the UK?";
     private static final String PAGE_HEADER_WELSH = "A gawsoch eich geni yn y Deyrnas Unedig?";
 
-    @FindBy(tagName = "h1") private WebElement birthPageHeader;
-    @FindBy(id = "bornInUK-true-label") private WebElement bornInTheUKYesButton;
-    @FindBy(id = "bornInUK-false-label") private WebElement bornInTheUKNoButton;
-    @FindBy(id = "countryOfBirth") private WebElement countryOfBirthDropdown;
-    @FindBy(id = "townOfBirth") private WebElement townOfBirthField;
+    @FindBy(tagName = "h1")
+    private WebElement birthPageHeader;
+    @FindBy(id = "bornInUK-true-label")
+    private WebElement bornInTheUKYesButton;
+    @FindBy(id = "bornInUK-false-label")
+    private WebElement bornInTheUKNoButton;
+    @FindBy(id = "countryOfBirth")
+    private WebElement countryOfBirthDropdown;
+    @FindBy(id = "townOfBirth")
+    private WebElement townOfBirthField;
 
     public void verifyPageHeader() throws Exception {
         verifyHeaderBilingual(PAGE_HEADER_WELSH, PAGE_HEADER_ENGLISH, birthPageHeader);
@@ -43,8 +48,7 @@ public class BirthPage extends Site {
     public void selectCountryOfBirth(String countryOfBirth) {
         if (countryOfBirth.equalsIgnoreCase("Random")) {
             selectRandomCountryOfBirth(findElement(id("country-of-birth")), DataStore.APPLICANT_COUNTRY_OF_BIRTH);
-        }
-        else {
+        } else {
             String countryName = getCountryName(countryOfBirth);
             new Select(countryOfBirthDropdown).selectByVisibleText(countryName);
             String countryNameEnglish = CountryStore.countryHashMap.get(countryOfBirth).get(4);

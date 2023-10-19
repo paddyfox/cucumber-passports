@@ -28,7 +28,7 @@
         <!-- J -->
         <jackson.version>2.15.2</jackson.version>
         <java.version>11</java.version>
-        <json.version>20230618</json.version>
+        <json.version>20231013</json.version>
         <!-- L -->
         <logback-classic.version>1.4.11</logback-classic.version>
         <lombok.version>1.18.28</lombok.version>

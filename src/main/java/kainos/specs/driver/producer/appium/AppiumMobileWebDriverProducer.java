@@ -1,7 +1,6 @@
 package kainos.specs.driver.producer.appium;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
 import kainos.specs.driver.GridUtils;
 import kainos.specs.driver.producer.BaseRemoteDriver;
 import kainos.specs.driver.producer.WebDriverProducer;
@@ -31,7 +30,7 @@ public class AppiumMobileWebDriverProducer extends BaseRemoteDriver implements W
         browserstackOptions.put("appiumVersion", appiumVersion);
         browserstackOptions.put("local", "true");
 
-        browserstackOptions.put(MobileCapabilityType.DEVICE_NAME, deviceName);
+        browserstackOptions.put("device", deviceName);
         if (osVersion != null) {
             browserstackOptions.put("osVersion", osVersion);
         }

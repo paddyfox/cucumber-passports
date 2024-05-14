@@ -3,6 +3,7 @@ package kainos.specs.site;
 import kainos.specs.countrystore.CountryStore;
 import kainos.specs.datastore.DataStore;
 import kainos.specs.driver.DriverManager;
+import kainos.specs.environment.Environment;
 import kainos.specs.helpers.LanguageCode;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Pair;
@@ -143,8 +144,10 @@ public class Site {
 
     public void verifyPageHeader(String expectedPageHeader, WebElement pageHeaderElement) throws Exception {
         verifyTextInElement(expectedPageHeader, pageHeaderElement);
-
         log.info("Loaded page: {}", expectedPageHeader);
+        if (Environment.executeAccessibilityTesting()) {
+            AccessibilityBase.checkAllAccessibilityViolations(expectedPageHeader);
+        }
     }
 
     public void verifyPageHeaderWelsh(Pair<String, String> expectedPageHeaders, WebElement pageHeaderElement) {

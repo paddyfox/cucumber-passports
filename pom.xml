@@ -14,32 +14,33 @@
 
         <!-- Versions -->
         <!-- A -->
-        <appium.version>9.2.0</appium.version>
+        <appium.version>9.2.2</appium.version>
+        <axe.core.version>4.9.0</axe.core.version>
         <!-- C -->
-        <commons-io.version>2.15.1</commons-io.version>
+        <commons-io.version>2.16.1</commons-io.version>
         <cucumber.reporting.version>5.8.0</cucumber.reporting.version>
 		<cucumber.version>6.10.4</cucumber.version>
         <!-- D -->
-        <dependency.check.plugin.version>9.0.10</dependency.check.plugin.version>
+        <dependency.check.plugin.version>9.1.0</dependency.check.plugin.version>
         <!-- H -->
         <hamcrest.version>2.2</hamcrest.version>
         <!-- J -->
-        <jackson.version>2.17.0</jackson.version>
-        <java.version>11</java.version>
+        <jackson.version>2.17.1</jackson.version>
+        <java.version>17</java.version>
         <json.version>20240303</json.version>
         <!-- L -->
-        <logback-classic.version>1.5.3</logback-classic.version>
+        <logback-classic.version>1.5.6</logback-classic.version>
         <lombok.version>1.18.32</lombok.version>
         <!-- M -->
         <maven.compiler.version>3.13.0</maven.compiler.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
         <!-- S -->
-        <selenium.version>4.18.1</selenium.version>
-        <slf4j-api.version>2.0.7</slf4j-api.version>
+        <selenium.version>4.20.0</selenium.version>
+        <slf4j-api.version>2.0.13</slf4j-api.version>
         <!-- T -->
-        <testng.version>7.9.0</testng.version>
+        <testng.version>7.10.2</testng.version>
         <!-- W -->
         <webdriver.manager.version>5.7.0</webdriver.manager.version>
     </properties>
@@ -47,6 +48,14 @@
 
     <!--DEPENDENCIES-->
     <dependencies>
+
+        <!-- Axe Core -->
+        <dependency>
+            <groupId>com.deque.html.axe-core</groupId>
+            <artifactId>selenium</artifactId>
+            <version>${axe.core.version}</version>
+        </dependency>
+
 
         <!-- TestNG -->
         <dependency>

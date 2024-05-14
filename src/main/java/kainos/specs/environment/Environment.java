@@ -18,4 +18,9 @@ public class Environment {
         String jenkinsUrl = System.getenv("JENKINS_URL");
         return !isNullOrEmpty(jenkinsUrl);
     }
+
+    public static Boolean executeAccessibilityTesting() {
+        //Change this flag to true to enable Accessibility testing to run
+        return false;
+    }
 }

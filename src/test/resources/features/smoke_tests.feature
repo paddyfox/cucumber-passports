@@ -8,17 +8,3 @@ Feature: Apply for a First time UK Passport
     Given an applicant of type adult United Kingdom first time
     When they apply for a first time passport with a successful payment
     Then the application status will be: submitted
-
-  @SMK1 @smoke
-  Scenario: Simple happy path for adult UK applications to apply for a first time passport2
-
-    Given an applicant of type adult United Kingdom first time
-    When they apply for a first time passport with a successful payment
-    Then the application status will be: submitted
-
-  @SMK1 @smoke
-  Scenario: Simple happy path for adult UK applications to apply for a first time passport3
-
-    Given an applicant of type adult United Kingdom first time
-    When they apply for a first time passport with a successful payment
-    Then the application status will be: submitted

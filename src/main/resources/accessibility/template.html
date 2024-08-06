@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style type="text/css" media="screen">
+      code {font-size: 120%;}
+
+      body {
+        font-family: Arial;
+      }
+
+      pre code {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 20px;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      table, tr, td, th {
+        border: 1px solid black;
+        align-content: center;
+      }
+
+      .node-details {
+        margin: 5px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 1200px;
+        border: 1px solid black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Accessibility report</h1>
+    <p>Time from report: {timestamp}</p>
+    <p>Time of run: {run-timestamp}</p>
+    <p><a href="{url}">URL: {url}</a></p>
+    <p>Result: {result}</p>
+    <p><a href="{json-report}">View full json report</a></p>
+    <h2>Screenshot</h2>
+    <p>
+      <img src="{screenshot}"/>
+    </p>
+
+    <h2>Violations</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Impact</th>
+        <th>Help URL</th>
+        <th>Help</th>
+        <th>Tags</th>
+        <th>Details</th>
+      </tr>
+      {violations}
+    </table>
+
+    <h2>Passed</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Help URL</th>
+        <th>Help</th>
+        <th>Tags</th>
+      </tr>
+      {passed}
+    </table>
+  </body>
+</html>

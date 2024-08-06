@@ -1,11 +1,14 @@
 package step_definitions;
 
+import static org.testng.Assert.assertFalse;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import kainos.specs.accessibility.AccessibilityService;
 import kainos.specs.driver.DriverManager;
 import kainos.specs.helpers.ApplicantData;
 import lombok.extern.slf4j.Slf4j;
@@ -30,13 +33,17 @@ public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
     private ApplicantData applicant;
 
     @Before
-    public void setUp() {
+    public void setUp(Scenario scenario) {
         getDriver().manage().deleteAllCookies();
+        AccessibilityService.createInstance(scenario.getName());
     }
 
     @After
     public void tearDown(Scenario scenario) {
         try {
+            if(AccessibilityService.getInstance().accessibilityCheckFailed()) {
+                scenario.log("Accessibility tests failed");
+            }
             if (scenario.isFailed()) {
                 log.error("TEST FAILED!!");
 
@@ -51,7 +58,6 @@ public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
                 log.error("URL FOR FAILED TEST WAS: {}", getCurrentUrl());
                 final byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
                 scenario.attach(screenshot, "image/png", String.valueOf(scenario) + UUID.randomUUID());
-
             } else {
                 log.info("TEST PASSED :)");
             }
@@ -120,5 +126,10 @@ public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
     @Then("^the application status will be: (.*)$")
     public void theApplicationWillBe(String expectedStatus) {
         //TODO: Extend the test further
+    }
+
+    @Then("^there are no accessibility failures$")
+    public void thereAreNoAccessibilityFailures() {
+        assertFalse(AccessibilityService.getInstance().accessibilityCheckFailed());
     }
 }

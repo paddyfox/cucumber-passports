@@ -42,7 +42,7 @@
         <!-- T -->
         <testng.version>7.10.2</testng.version>
         <!-- W -->
-        <webdriver.manager.version>5.7.0</webdriver.manager.version>
+        <webdriver.manager.version>6.1.0</webdriver.manager.version>
     </properties>
     <!-- END of PROPERTIES -->
 

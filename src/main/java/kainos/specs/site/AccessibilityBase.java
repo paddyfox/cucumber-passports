@@ -44,20 +44,21 @@ public class AccessibilityBase extends Site {
         log.info("Axe A11y test report saved to: " + reportPath);
     }
 
-    public static void saveReport(Results results, String reportFile, String pageHeader) throws FileNotFoundException {
+    public static void saveReport(Results results, String reportFile, String pageHeader) {
         List<Rule> violations = results.getViolations();
         if (violations.isEmpty()) {
             Assert.assertTrue(true, "No violations found");
-            log.info("No Accessibility violations found on page: " + pageHeader);
+            log.info("No Accessibility violations found on page: {}", pageHeader);
         }
         else {
-            JsonParser jsonParser = new JsonParser();
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            // Create a Gson instance with pretty printing
+            new GsonBuilder().setPrettyPrinting().create();
+
+            // Write raw results to JSON
             AxeReporter.writeResultsToJsonFile(reportFile, results);
-            JsonElement jsonElement = jsonParser.parse(new FileReader(reportFile + ".json"));
-            String prettyJson = gson.toJson(jsonElement);
-            AxeReporter.writeResultsToTextFile(reportFile, prettyJson);
-            log.error(violations.size() + " Accessibility violations found on page: " + pageHeader);
+
+            // Log out results
+            log.error("{} Accessibility violations found on page: {}", violations.size(), pageHeader);
             log.error(results.getViolations().toString());
         }
     }

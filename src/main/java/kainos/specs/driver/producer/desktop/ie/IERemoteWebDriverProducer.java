@@ -17,7 +17,6 @@ public class IERemoteWebDriverProducer extends BaseRemoteDriver implements WebDr
         internetExplorerOptions.ignoreZoomSettings();
         internetExplorerOptions.requireWindowFocus();
         internetExplorerOptions.destructivelyEnsureCleanSession();
-        internetExplorerOptions.disableNativeEvents();
         internetExplorerOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         if (BROWSER_VERSION != null) {
             internetExplorerOptions.setCapability("browserVersion", BROWSER_VERSION);

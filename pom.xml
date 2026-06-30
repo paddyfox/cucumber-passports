@@ -25,7 +25,7 @@
         <!-- H -->
         <hamcrest.version>3.0</hamcrest.version>
         <!-- J -->
-        <jackson.version>2.19.0</jackson.version>
+        <jackson.version>2.22.0</jackson.version>
         <java.version>17</java.version>
         <json.version>20250107</json.version>
         <!-- L -->

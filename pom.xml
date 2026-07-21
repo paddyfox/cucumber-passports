@@ -14,35 +14,33 @@
 
         <!-- Versions -->
         <!-- A -->
-        <appium.version>9.3.0</appium.version>
+        <appium.version>10.0.0</appium.version>
         <axe.core.version>4.10.1</axe.core.version>
         <!-- C -->
-        <commons-io.version>2.16.1</commons-io.version>
-        <cucumber.reporting.version>5.8.4</cucumber.reporting.version>
-		<cucumber.version>7.21.1</cucumber.version>
+        <commons-io.version>2.20.0</commons-io.version>
+        <cucumber.reporting.version>5.11.0</cucumber.reporting.version>
+        <cucumber.version>7.34.3</cucumber.version>
         <!-- D -->
         <dependency.check.plugin.version>12.1.1</dependency.check.plugin.version>
         <!-- H -->
         <hamcrest.version>3.0</hamcrest.version>
         <!-- J -->
-        <jackson.version>2.19.0</jackson.version>
-        <java.version>17</java.version>
+        <jackson.version>2.21.5</jackson.version>
+        <java.version>21</java.version>
         <json.version>20250107</json.version>
         <!-- L -->
-        <logback-classic.version>1.5.18</logback-classic.version>
-        <lombok.version>1.18.34</lombok.version>
+        <logback-classic.version>1.5.38</logback-classic.version>
+        <lombok.version>1.18.42</lombok.version>
         <!-- M -->
-        <maven.compiler.version>3.14.0</maven.compiler.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
+        <maven.compiler.version>3.14.1</maven.compiler.version>
+        <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
         <!-- S -->
-        <selenium.version>4.28.1</selenium.version>
+        <selenium.version>4.45.0</selenium.version>
         <slf4j-api.version>2.0.17</slf4j-api.version>
         <!-- T -->
         <testng.version>7.11.0</testng.version>
         <!-- W -->
-        <webdriver.manager.version>6.1.0</webdriver.manager.version>
+        <webdriver.manager.version>6.3.4</webdriver.manager.version>
     </properties>
     <!-- END of PROPERTIES -->
 
@@ -176,8 +174,6 @@
                 <version>${maven.compiler.version}</version>
                 <configuration>
                     <release>${java.version}</release>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
 

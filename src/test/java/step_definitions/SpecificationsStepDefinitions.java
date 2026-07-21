@@ -12,12 +12,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import step_definitions.helpers.SpecificationsStepsHelpers;
+import step_definitions.helpers.TestEnvironmentHelpers;
 import step_definitions.steps.SpecificationsStepsApply;
 import step_definitions.steps.SpecificationsStepsFilter;
 import step_definitions.steps.SpecificationsStepsPhoto;
-import step_definitions.helpers.TestEnvironmentHelpers;
 
+import java.util.Locale;
 import java.util.UUID;
+
+import static org.testng.Assert.assertTrue;
 
 @Slf4j
 public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
@@ -27,10 +30,8 @@ public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
     private final SpecificationsStepsApply theApplicantApply = new SpecificationsStepsApply();
     private final SpecificationsStepsPhoto theApplicantPhoto = new SpecificationsStepsPhoto();
 
-    private ApplicantData applicant;
-
     @Before
-    public void setUp() {
+    public void setup() {
         getDriver().manage().deleteAllCookies();
     }
 
@@ -40,8 +41,11 @@ public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
             if (scenario.isFailed()) {
                 log.error("TEST FAILED!!");
 
-                String path = scenario.getUri().getPath();
-                String feature = path.substring(path.lastIndexOf("/") + 1);
+                String feature = "unknown-feature";
+                if (scenario.getUri() != null && scenario.getUri().getPath() != null) {
+                    String path = scenario.getUri().getPath();
+                    feature = path.substring(path.lastIndexOf("/") + 1);
+                }
                 log.error("FAILED SCENARIO NAME: {} ({}) - {} - {}",
                         scenario.getName(),
                         String.join(" ", scenario.getSourceTagNames()),
@@ -64,7 +68,7 @@ public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
     }
 
     private void setApplicantData(String applicantType) throws Exception {
-        applicant = new ApplicantData(applicantType);
+        ApplicantData applicant = new ApplicantData(applicantType);
 
         theApplicantFilter.setApplicant(applicant);
         theApplicantApply.setApplicant(applicant);
@@ -119,6 +123,26 @@ public class SpecificationsStepDefinitions extends SpecificationsStepsHelpers {
 
     @Then("^the application status will be: (.*)$")
     public void theApplicationWillBe(String expectedStatus) {
-        //TODO: Extend the test further
+        String normalisedExpectedStatus = expectedStatus.trim().toLowerCase(Locale.ROOT);
+        String currentUrl = getCurrentUrl();
+
+        switch (normalisedExpectedStatus) {
+            case "submitted":
+                assertTrue(
+                        isInSubmittedJourneyState(currentUrl),
+                        "Expected the application to be submitted, but current URL was: " + currentUrl);
+                return;
+            default:
+                throw new IllegalArgumentException("No behaviour defined for: " + expectedStatus);
+        }
+    }
+
+    private boolean isInSubmittedJourneyState(String currentUrl) {
+        String normalisedUrl = currentUrl.toLowerCase(Locale.ROOT);
+        return normalisedUrl.contains("submitted")
+                || normalisedUrl.contains("complete")
+                || normalisedUrl.contains("confirmation")
+                || normalisedUrl.contains("payment")
+                || normalisedUrl.contains("pay");
     }
 }

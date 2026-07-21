@@ -2,13 +2,11 @@ package step_definitions.steps;
 
 import kainos.specs.datastore.DataStore;
 import kainos.specs.helpers.ApplicantData;
-import kainos.specs.site.page_objects.or.pages.photo.*;
+import kainos.specs.site.page_objects.onlineRenewals.pages.photo.*;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import step_definitions.helpers.SpecificationsStepsHelpers;
 
 import static kainos.specs.datastore.DataStore.*;
@@ -71,13 +69,13 @@ public class SpecificationsStepsPhoto extends SpecificationsStepsHelpers {
 
     private void verifyCorrectPhotoGuidance() {
         if (applicant.isRising16() || !applicant.isChild()) {
-            assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for adults");
+            assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for adults", "Expected adult photo guidance for uploaded photo: " + applicant.getPhotoName());
         } else {
-            assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for babies and children");
+            assertEquals(photoGuideHowToTakeADigitalPhotoPage.getPhotoGuidanceSubHeader(), "Photos for babies and children", "Expected child photo guidance for uploaded photo: " + applicant.getPhotoName());
         }
     }
 
     private void waitForPhotoUploadRetrieve() {
-        webDriverWait(90_000).until(ExpectedConditions.invisibilityOfElementLocated(By.id("progress-container")));
+        photoUploadResultPage.waitForPhotoUploadToComplete();
     }
 }

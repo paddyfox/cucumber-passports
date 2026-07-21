@@ -6,8 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.Listeners;
 
 @CucumberOptions(
-        features = "src/test/resources/features",
-        glue = "step_definitions",
+        features = "classpath:features",
+        glue = {"step_definitions"},
         tags = "@smoke",
         plugin = {"pretty", "html:target/cucumber-reports/cucumber-reports.html"})
 

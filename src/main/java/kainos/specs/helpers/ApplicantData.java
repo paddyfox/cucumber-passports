@@ -1,7 +1,7 @@
 package kainos.specs.helpers;
 
 import kainos.specs.datastore.DataStore;
-import kainos.specs.site.page_objects.or.constants.StepDefinitionAssertionConstants;
+import kainos.specs.site.page_objects.onlineRenewals.constants.TestDataConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.time.DateTime;
 
@@ -468,7 +468,7 @@ public class ApplicantData extends TestData {
                         if (isOverseas()) {
                             return getOverseasHousePhoneNumber();
                         } else {
-                            return StepDefinitionAssertionConstants.UK_HOME_PHONE_NUMBER;
+                            return TestDataConstants.UK_HOME_PHONE_NUMBER;
                         }
                     }
                     break;
@@ -477,7 +477,7 @@ public class ApplicantData extends TestData {
                         if (isOverseas()) {
                             return getOverseasMobilePhoneNumber();
                         } else {
-                            return StepDefinitionAssertionConstants.UK_MOBILE_PHONE_NUMBER;
+                            return TestDataConstants.UK_MOBILE_PHONE_NUMBER;
                         }
                     }
                     break;
@@ -559,9 +559,9 @@ public class ApplicantData extends TestData {
 
         if (MISTYPED_EMAIL.equalsIgnoreCase(value)) {
             //TODO: In future add randomisation so any applicant can have a valid OR mistyped email address
-            DataStore.setDataKey(EMAIL_KEY, StepDefinitionAssertionConstants.MISTYPED_EMAIL_ADDRESS);
+            DataStore.setDataKey(EMAIL_KEY, TestDataConstants.MISTYPED_EMAIL_ADDRESS);
 
-            return StepDefinitionAssertionConstants.MISTYPED_EMAIL_ADDRESS;
+            return TestDataConstants.MISTYPED_EMAIL_ADDRESS;
         }
 
         if (NON_STANDARD.equalsIgnoreCase(value)) {
@@ -912,13 +912,13 @@ public class ApplicantData extends TestData {
 
     public Boolean isABritishNationalOverseasRequiringAReferee() {
         return !isNullOrEmpty(DataStore.getDataKey(DataStore.WHAT_NATIONALITY_ON_PASSPORT))
-                && StepDefinitionAssertionConstants.BRITISH_NATIONAL_OVERSEAS.equals(DataStore.getDataKey(DataStore.WHAT_NATIONALITY_ON_PASSPORT))
+                && TestDataConstants.BRITISH_NATIONAL_OVERSEAS.equals(DataStore.getDataKey(DataStore.WHAT_NATIONALITY_ON_PASSPORT))
                 && getExistingPassportIssueDate().getYear() < 2004;
     }
 
     public Boolean isABritishNationalOverseas() {
         return !isNullOrEmpty(DataStore.getDataKey(DataStore.WHAT_NATIONALITY_ON_PASSPORT))
-                && StepDefinitionAssertionConstants.BRITISH_NATIONAL_OVERSEAS.equals(DataStore.getDataKey(DataStore.WHAT_NATIONALITY_ON_PASSPORT));
+                && TestDataConstants.BRITISH_NATIONAL_OVERSEAS.equals(DataStore.getDataKey(DataStore.WHAT_NATIONALITY_ON_PASSPORT));
     }
 
     public Boolean isPremium() {
@@ -962,7 +962,7 @@ public class ApplicantData extends TestData {
     }
 
     public Boolean hasOtherIssuingAuthority() {
-        return StepDefinitionAssertionConstants.OTHER.equalsIgnoreCase(getIssuingAuthority());
+        return TestDataConstants.OTHER.equalsIgnoreCase(getIssuingAuthority());
     }
 
     public Boolean hasLostOrStolenPassport() {
@@ -1049,7 +1049,7 @@ public class ApplicantData extends TestData {
     }
 
     private String getRandomIssuingAuthority() {
-        if (StepDefinitionAssertionConstants.BRITISH_NATIONAL_OVERSEAS.equalsIgnoreCase(whatNationalityOnPassport)) {
+        if (TestDataConstants.BRITISH_NATIONAL_OVERSEAS.equalsIgnoreCase(whatNationalityOnPassport)) {
             return "UK";
         } else {
             String[] issueAuthorities = {

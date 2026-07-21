@@ -22,15 +22,6 @@ public class BaseRunner extends AbstractTestNGCucumberTests {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
-    @AfterSuite(alwaysRun = true)
-    public void tearDownClass() {
-        if (testNGCucumberRunner == null) {
-            return;
-        }
-        testNGCucumberRunner.finish();
-        DriverManager.quitDriver();
-    }
-
     @Test(groups = "cucumber parallel", description = "Runs Parallel enabled Scenarios", dataProvider = "parallelScenarios")
     public void runParallelScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
         testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
@@ -39,6 +30,21 @@ public class BaseRunner extends AbstractTestNGCucumberTests {
     @Test(groups = "cucumber serial", description = "Runs Scenarios with Serial tags", dataProvider = "serialScenarios")
     public void runSerialScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
         testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
+    }
+
+    @Override
+    @Test(enabled = false)
+    public void runScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
+        // Disabled to avoid duplicate execution via AbstractTestNGCucumberTests.
+    }
+
+    @AfterSuite(alwaysRun = true)
+    public void tearDownClass() {
+        if (testNGCucumberRunner == null) {
+            return;
+        }
+        testNGCucumberRunner.finish();
+        DriverManager.quitDriver();
     }
 
     @DataProvider(parallel = true)

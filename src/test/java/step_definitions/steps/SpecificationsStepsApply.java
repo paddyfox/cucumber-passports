@@ -3,9 +3,9 @@ package step_definitions.steps;
 import kainos.specs.countrystore.CountryStore;
 import kainos.specs.datastore.DataStore;
 import kainos.specs.helpers.ApplicantData;
-import kainos.specs.site.page_objects.or.pages.apply.*;
-import kainos.specs.site.page_objects.or.pages.filter.BirthPage;
-import kainos.specs.site.page_objects.or.pages.photo.PhotoGuideHowToGetADigitalPhotoPage;
+import kainos.specs.site.page_objects.onlineRenewals.pages.apply.*;
+import kainos.specs.site.page_objects.onlineRenewals.pages.filter.BirthPage;
+import kainos.specs.site.page_objects.onlineRenewals.pages.photo.PhotoGuideHowToGetADigitalPhotoPage;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import static com.google.common.base.Strings.isNullOrEmpty;
 import static kainos.specs.datastore.DataStore.*;
 import static kainos.specs.helpers.ApplicantData.isAValidApplicationForThisStep;
-import static kainos.specs.site.page_objects.or.constants.StepDefinitionAssertionConstants.OTHER;
+import static kainos.specs.site.page_objects.onlineRenewals.constants.TestDataConstants.OTHER;
 
 @Slf4j
 public class SpecificationsStepsApply extends SpecificationsStepsHelpers {

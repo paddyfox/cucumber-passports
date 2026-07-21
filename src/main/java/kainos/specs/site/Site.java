@@ -8,17 +8,16 @@ import kainos.specs.helpers.LanguageCode;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Pair;
 import org.openqa.selenium.*;
-import org.openqa.selenium.json.JsonException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 import static kainos.specs.datastore.DataStore.APPLICATION_LANGUAGE;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.empty;
-
 @Slf4j
 public class Site {
+
+    private static final long DEFAULT_WAIT_MILLISECONDS = 10_000;
 
     public static WebDriver getDriver() {
         return DriverManager.getDriver();
@@ -33,68 +32,38 @@ public class Site {
     }
 
     public static boolean elementIsDisplayed(WebElement element) {
-        int tries = 10;
-        for (int i = 1; i <= tries; i++) {
-            try {
-                return element.isDisplayed();
-            } catch (NoSuchElementException e) {
-                return false;
-            } catch (StaleElementReferenceException | JsonException e) {
-                log.info("Retry {} out of {} to check if WebElement {} is displayed", i, tries, element);
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                    e.printStackTrace();
-                    throw new RuntimeException(e);
-                }
-            }
+        try {
+            webDriverWait(DEFAULT_WAIT_MILLISECONDS)
+                    .ignoring(StaleElementReferenceException.class)
+                    .until(ExpectedConditions.visibilityOf(element));
+            return true;
+        } catch (TimeoutException | NoSuchElementException e) {
+            return false;
         }
-
-        throw new RuntimeException("ERROR: Could not determine if WebElement is displayed: " + element);
     }
 
     private static void waitForElementToBeDisplayed(WebElement element) {
-        int tries = 10;
-        for (int i = 1; i <= tries; i++) {
-            if (elementIsDisplayed(element)) {
-                log.debug("WebElement displayed {}", element);
-                return;
-            }
-
-            try {
-                log.info("Retry {} out of {} for WebElement {} to be displayed", i, tries, element);
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
-            }
+        try {
+            webDriverWait(DEFAULT_WAIT_MILLISECONDS)
+                    .ignoring(StaleElementReferenceException.class)
+                    .until(ExpectedConditions.visibilityOf(element));
+            log.debug("WebElement displayed {}", element);
+        } catch (TimeoutException e) {
+            throw new NoSuchElementException("ERROR: Cannot find WebElement: " + element, e);
         }
-
-        throw new NoSuchElementException("ERROR: Cannot find WebElement: " + element);
     }
 
     public static void waitForElementToContainText(WebElement element, String expectedText) {
         waitForElementToBeDisplayed(element);
 
-        String actualText = null;
-        int tries = 10;
-        for (int i = 0; i < tries; i++) {
-            actualText = element.getText();
-            if (actualText.contains(expectedText)) {
-                log.debug("WebElement {} contained text: {} (expected {})", element, actualText, expectedText);
-                return;
-            }
-
-            try {
-                log.info("WebElement {} did not contain expected text: {}, got: {}", element, expectedText, actualText);
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
-            }
+        try {
+            webDriverWait(DEFAULT_WAIT_MILLISECONDS)
+                    .ignoring(StaleElementReferenceException.class)
+                    .until(ExpectedConditions.textToBePresentInElement(element, expectedText));
+            log.debug("WebElement {} contained expected text: {}", element, expectedText);
+        } catch (TimeoutException e) {
+            throw new NotFoundException("ERROR: WebElement " + element + " did not contain expected text: " + expectedText, e);
         }
-
-        throw new NotFoundException("ERROR: WebElement " + element + " did not contain expected text: " + expectedText + ", got: " + actualText);
     }
 
     public static void goToUrl(String webAddress) {
@@ -111,7 +80,9 @@ public class Site {
 
     public void removeCookies() {
         getDriver().manage().deleteAllCookies();
-        assertThat(getDriver().manage().getCookies(), empty());
+        if (!getDriver().manage().getCookies().isEmpty()) {
+            throw new IllegalStateException("Expected all cookies to be removed but cookies are still present");
+        }
     }
 
     public void clickContinue() {
@@ -119,23 +90,16 @@ public class Site {
     }
 
     public void clickOnElement(WebElement webElement) {
-        for (int i = 1; i <= 10; i++) {
-            try {
-                log.debug("Try click {} for element {}", i, webElement);
-                ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", webElement);
-                webElement.click();
-                return;
-            } catch (NoSuchElementException | ElementClickInterceptedException | StaleElementReferenceException e) {
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                    throw new RuntimeException(ex);
-                }
-            }
+        try {
+            WebElement clickableElement = webDriverWait(DEFAULT_WAIT_MILLISECONDS)
+                    .ignoring(StaleElementReferenceException.class)
+                    .until(ExpectedConditions.elementToBeClickable(webElement));
+            log.debug("Clicking element {}", clickableElement);
+            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", clickableElement);
+            clickableElement.click();
+        } catch (TimeoutException | ElementClickInterceptedException | StaleElementReferenceException e) {
+            throw new NoSuchElementException("Cannot find or click on WebElement: " + webElement, e);
         }
-
-        throw new NoSuchElementException("Cannot find or click on WebElement: " + webElement);
     }
 
     public void enterTextIntoTheField(WebElement webElement, String value) {
@@ -165,26 +129,24 @@ public class Site {
     }
 
     public void verifyHeaderBilingualWithRetry(String expectedWelsh, String expectedEnglish, WebElement pageHeader) throws Exception {
-        int tries = 30;
-        boolean pageHeaderFound = false;
-        while (tries > 0 && !pageHeaderFound) {
-            tries--;
-            try {
-                if (isApplicationLanguageWelsh()) {
-                    verifyPageHeaderWelsh(Pair.of(expectedWelsh, expectedEnglish), pageHeader);
-                } else {
-                    verifyPageHeader(expectedEnglish, pageHeader);
-                }
-                pageHeaderFound = true;
-            } catch (NoSuchElementException | StaleElementReferenceException e) {
-                log.info("Page header not found. {} tries remaining", tries);
-                if (tries == 0) {
-                    throw new Exception("Failed to find page header", e);
-                }
-                Thread.sleep(3000);
-
+        try {
+            if (isApplicationLanguageWelsh()) {
+                waitForElementToContainText(pageHeader, expectedWelsh);
+                log.info("Loaded page: {} ({})", expectedWelsh, expectedEnglish);
+            } else {
+                waitForElementToContainText(pageHeader, expectedEnglish);
+                log.info("Loaded page: {}", expectedEnglish);
             }
+            if (Environment.executeAccessibilityTesting()) {
+                AccessibilityBase.checkAllAccessibilityViolations(expectedEnglish);
+            }
+        } catch (StaleElementReferenceException | NotFoundException e) {
+            throw new Exception("Failed to find page header", e);
         }
+    }
+
+    protected void waitForElementToBeInvisible(By elementLocator, long timeoutMilliseconds) {
+        webDriverWait(timeoutMilliseconds).until(ExpectedConditions.invisibilityOfElementLocated(elementLocator));
     }
 
     public boolean isApplicationLanguageWelsh() {

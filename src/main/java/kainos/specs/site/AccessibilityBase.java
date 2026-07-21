@@ -4,16 +4,12 @@ import com.deque.html.axecore.results.Results;
 import com.deque.html.axecore.results.Rule;
 import com.deque.html.axecore.selenium.AxeBuilder;
 import com.deque.html.axecore.selenium.AxeReporter;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
@@ -49,8 +45,7 @@ public class AccessibilityBase extends Site {
         if (violations.isEmpty()) {
             Assert.assertTrue(true, "No violations found");
             log.info("No Accessibility violations found on page: {}", pageHeader);
-        }
-        else {
+        } else {
             // Create a Gson instance with pretty printing
             new GsonBuilder().setPrettyPrinting().create();
 

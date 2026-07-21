@@ -2,8 +2,8 @@ package step_definitions.steps;
 
 import kainos.specs.datastore.DataStore;
 import kainos.specs.helpers.ApplicantData;
-import kainos.specs.site.page_objects.or.pages.StartPage;
-import kainos.specs.site.page_objects.or.pages.filter.*;
+import kainos.specs.site.page_objects.onlineRenewals.pages.StartPage;
+import kainos.specs.site.page_objects.onlineRenewals.pages.filter.*;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;

@@ -14,7 +14,7 @@
 
         <!-- Versions -->
         <!-- A -->
-        <appium.version>10.0.0</appium.version>
+        <appium.version>10.1.1</appium.version>
         <axe.core.version>4.10.1</axe.core.version>
         <!-- C -->
         <commons-io.version>2.20.0</commons-io.version>
